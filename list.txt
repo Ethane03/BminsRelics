@@ -1,0 +1,12 @@
+20 Key relics
+
+We're gonna make a relic class
+- Activate function
+- Item, meta
+- Directory name
+- Tick function
+
+Random Wand- Lucky block wand
+Pusher Wand- Pushes a block, useable once a day
+Overpowered Sword- Usable once
+Infinidirt- Places infinite dirt
