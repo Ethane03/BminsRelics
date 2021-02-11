@@ -7,6 +7,9 @@ import org.bukkit.inventory.ItemStack;
 public abstract class Relic {
     public ItemStack item;
     public String directory;
-    public abstract void init();
-    public abstract void Activate(PlayerInteractEvent event);
+    public Relic init() {
+        return null;
+    }
+    public void Activate(PlayerInteractEvent event){};
+    
 }

@@ -4,8 +4,10 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import org.bukkit.inventory.ItemStack;
 
 import frostfire.bminsrelics.item.ItemManager;
+import frostfire.bminsrelics.item.Relic;
 
 public class RelicCommands implements CommandExecutor {
 
@@ -17,8 +19,15 @@ public class RelicCommands implements CommandExecutor {
         }
         Player player = (Player)sender;
         if(cmd.getName().equalsIgnoreCase("relic")) {
-            player.getInventory().addItem(ItemManager.wand);
+            Relic relic = ItemManager.GetRelic(args[0]);
+            if(relic!=null) {
+                player.getInventory().addItem(relic.item);
+            }
+            else {
+                player.sendMessage("I've never heard of a "+args[0]+" before.");
+            }
+            return true;
         }
-        return true;
+        return false;
     }
 }

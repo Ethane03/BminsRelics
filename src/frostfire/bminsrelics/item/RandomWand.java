@@ -6,19 +6,23 @@ import java.util.Random;
 
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
+import org.bukkit.entity.EntityType;
+import org.bukkit.entity.Fireball;
 import org.bukkit.entity.Player;
-import org.bukkit.event.Event;
+import org.bukkit.entity.Snowball;
+import org.bukkit.entity.SpectralArrow;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
+
 public class RandomWand extends Relic {
 
     @Override
-    public void init() {
+    public Relic init() {
         directory = "randwand";
-        ItemStack temp = new ItemStack(Material.STICK, 1);
+        ItemStack temp = new ItemStack(Material.WOODEN_SWORD);
         ItemMeta meta = temp.getItemMeta();
         meta.setDisplayName("&6Lucky Wand");
         List<String> lore = new ArrayList<>();
@@ -28,13 +32,32 @@ public class RandomWand extends Relic {
         meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
         temp.setItemMeta(meta);
         item = temp;
+        return this;
     }
     @Override
     public void Activate(PlayerInteractEvent event) {
         Player player = event.getPlayer();
         Random random = new Random();
-        //int rand = random. 
-        player.getWorld().createExplosion(player.getLocation(), 5);
+        //Change for how many switch cases you have.
+        int effects = 3;
+        int rand = random.nextInt(effects-1); 
+        switch(rand) {
+            case 0:
+                player.launchProjectile(Snowball.class,player.getEyeLocation().getDirection().multiply(3));
+                break;
+            case 1:
+                player.launchProjectile(Fireball.class,player.getEyeLocation().getDirection().multiply(3));
+                break;
+            case 2:
+                player.launchProjectile(SpectralArrow.class,player.getEyeLocation().getDirection().multiply(3));
+                break;
+            case 3:
+                EntityType[] entities = new EntityType[]{EntityType.BAT,EntityType.BEE,EntityType.COW,EntityType.SHEEP,EntityType.WOLF,EntityType.CHICKEN};
+                player.getWorld().spawnEntity(player.getLocation(), entities[random.nextInt(entities.length)]);
+            default:
+                player.sendMessage("Tell Bmin something went wrong with his Random Wand Relic.");
+                break;
+        }
     }
     
 }

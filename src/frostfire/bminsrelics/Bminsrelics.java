@@ -9,7 +9,6 @@ public class Bminsrelics extends JavaPlugin {
     public String updatemsg = "";
     @Override
     public void onEnable() {
-        ItemManager.init();
         getCommand("relic").setExecutor(new RelicCommands());
         getLogger().info("Ethan and Brendon's epic SMP plugin has been enabled.");
     }

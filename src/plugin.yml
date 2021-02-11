@@ -5,4 +5,4 @@ description: A really cool plugin for relics and a few other things probably
 commands:
   relic:
     description: Gives a relic
-    usage: /<command>
+    usage: /<command> [relic]
