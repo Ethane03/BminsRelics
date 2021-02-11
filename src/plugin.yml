@@ -1,5 +1,5 @@
 name: Relics
-main: frostfire.relics.Relics
+main: frostfire.relics.Bminsrelics
 version: 0.0.1
 description: A really cool plugin for relics and a few other things probably
 commands:
