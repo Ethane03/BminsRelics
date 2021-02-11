@@ -11,5 +11,4 @@ public abstract class Relic {
         return null;
     }
     public void Activate(PlayerInteractEvent event){};
-    
 }

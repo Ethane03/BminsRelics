@@ -22,7 +22,7 @@ public class RandomWand extends Relic {
     @Override
     public Relic init() {
         directory = "randwand";
-        ItemStack temp = new ItemStack(Material.WOODEN_SWORD);
+        ItemStack temp = new ItemStack(Material.STICK);
         ItemMeta meta = temp.getItemMeta();
         meta.setDisplayName("&6Lucky Wand");
         List<String> lore = new ArrayList<>();
