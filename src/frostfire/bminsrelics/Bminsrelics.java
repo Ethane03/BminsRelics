@@ -1,5 +1,6 @@
 package frostfire.bminsrelics;
 
+import frostfire.bminsrelics.commands.RelicCommands;
 import frostfire.bminsrelics.item.ItemManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -9,6 +10,7 @@ public class Bminsrelics extends JavaPlugin {
     @Override
     public void onEnable() {
         ItemManager.init();
+        getCommand("relic").setExecutor(new RelicCommands());
         getLogger().info("Ethan and Brendon's epic SMP plugin has been enabled.");
     }
 
