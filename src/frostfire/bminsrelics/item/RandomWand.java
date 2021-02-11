@@ -11,6 +11,7 @@ import org.bukkit.entity.Fireball;
 import org.bukkit.entity.Player;
 import org.bukkit.entity.Snowball;
 import org.bukkit.entity.SpectralArrow;
+import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
@@ -38,9 +39,10 @@ public class RandomWand extends Relic {
     public void Activate(PlayerInteractEvent event) {
         Player player = event.getPlayer();
         Random random = new Random();
+        if(event.getAction() == Action.RIGHT_CLICK_AIR||event.getAction() == Action.RIGHT_CLICK_BLOCK) {
         //Change for how many switch cases you have.
-        int effects = 3;
-        int rand = random.nextInt(effects-1); 
+        int effects = 4;
+        int rand = random.nextInt(effects); 
         switch(rand) {
             case 0:
                 player.launchProjectile(Snowball.class,player.getEyeLocation().getDirection().multiply(3));
@@ -58,6 +60,7 @@ public class RandomWand extends Relic {
                 player.sendMessage("Tell Bmin something went wrong with his Random Wand Relic.");
                 break;
         }
+    }
     }
     
 }

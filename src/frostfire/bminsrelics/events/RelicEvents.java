@@ -13,11 +13,9 @@ public class RelicEvents implements Listener {
 
     @EventHandler
     public static void onRightClick(PlayerInteractEvent event) {
-        event.getPlayer().sendMessage("You right clicked.");
         if(event.getItem() != null) {
             Relic relic = ItemManager.GetRelic(event.getItem());
             if(relic!=null) {
-                event.getPlayer().sendMessage("You right clicked with a relic.");
                 relic.Activate(event);
             }
         }
