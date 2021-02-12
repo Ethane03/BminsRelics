@@ -31,7 +31,7 @@ public class TrickSword extends Relic {
         lore.add("§3Use it wisely");
         meta.setLore(lore);
         meta.addEnchant(Enchantment.KNOCKBACK, 100, false);
-        AttributeModifier mod = new AttributeModifier(UUID.randomUUID(),"generic.attack_damage",10000.0, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HAND)
+        AttributeModifier mod = new AttributeModifier(UUID.randomUUID(),"generic.attack_damage",10000.0, AttributeModifier.Operation.ADD_NUMBER, EquipmentSlot.HAND);
         meta.addAttributeModifier(Attribute.GENERIC_ATTACK_DAMAGE,mod);
         meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
         temp.setItemMeta(meta);
