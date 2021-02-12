@@ -25,9 +25,9 @@ public class RandomWand extends Relic {
         directory = "randwand";
         ItemStack temp = new ItemStack(Material.STICK);
         ItemMeta meta = temp.getItemMeta();
-        meta.setDisplayName("&6Lucky Wand");
+        meta.setDisplayName("§6Lucky Wand");
         List<String> lore = new ArrayList<>();
-        lore.add("&3Even Bmin doesn't know what this will do.");
+        lore.add("§3Even Bmin doesn't know what this will do.");
         meta.setLore(lore);
         meta.addEnchant(Enchantment.MENDING, 1, false);
         meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);

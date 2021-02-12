@@ -3,7 +3,7 @@ package frostfire.bminsrelics.item;
 import org.bukkit.inventory.ItemStack;
 
 public class ItemManager {
-    static Relic[] relics = {new RandomWand().init()};
+    static Relic[] relics = {new RandomWand().init(), new Infinidirt().init()};
     public static Relic GetRelic(String register) {
         for (Relic relic : relics) {
             if(relic.directory.equals(register)) {
