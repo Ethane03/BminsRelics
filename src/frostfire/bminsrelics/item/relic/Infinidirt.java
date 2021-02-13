@@ -1,5 +1,6 @@
-package frostfire.bminsrelics.item;
+package frostfire.bminsrelics.item.relic;
 
+import frostfire.bminsrelics.item.Relic;
 import org.bukkit.GameMode;
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
@@ -14,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class Infinidirt extends Relic<PlayerInteractEvent> {
+public class Infinidirt extends Relic {
 
     @Override
     public Relic init() {
@@ -31,7 +32,7 @@ public class Infinidirt extends Relic<PlayerInteractEvent> {
         item = temp;
         return this;
     }
-    //@Override
+    @Override
     public void Activate(PlayerInteractEvent event) {
         Player player = event.getPlayer();
         if(event.getAction() == Action.RIGHT_CLICK_BLOCK&&player.getGameMode()!=GameMode.ADVENTURE) {

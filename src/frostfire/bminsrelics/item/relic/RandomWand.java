@@ -1,9 +1,10 @@
-package frostfire.bminsrelics.item;
+package frostfire.bminsrelics.item.relic;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import frostfire.bminsrelics.item.Relic;
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.EnderPearl;
@@ -21,7 +22,7 @@ import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
 
-public class RandomWand extends Relic<PlayerInteractEvent> {
+public class RandomWand extends Relic{
 
     @Override
     public Relic init() {
@@ -38,7 +39,7 @@ public class RandomWand extends Relic<PlayerInteractEvent> {
         item = temp;
         return this;
     }
-    //@Override
+    @Override
     public void Activate(PlayerInteractEvent event) {
         Player player = event.getPlayer();
         Random random = new Random();

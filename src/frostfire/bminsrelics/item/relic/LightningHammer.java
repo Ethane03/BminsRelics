@@ -1,8 +1,9 @@
-package frostfire.bminsrelics.item;
+package frostfire.bminsrelics.item.relic;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import frostfire.bminsrelics.item.Relic;
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
@@ -12,7 +13,7 @@ import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
-public class LightningHammer extends Relic<PlayerInteractEvent> {
+public class LightningHammer extends Relic {
     @Override
     public Relic init() {
         directory = "lightning";
@@ -28,7 +29,7 @@ public class LightningHammer extends Relic<PlayerInteractEvent> {
         item = temp;
         return this;
     }
-    //@Override
+    @Override
     public void Activate(PlayerInteractEvent event) {
         Player player = event.getPlayer();
         if(event.getAction() == Action.LEFT_CLICK_AIR) {

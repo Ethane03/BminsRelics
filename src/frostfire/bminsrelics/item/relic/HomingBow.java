@@ -1,5 +1,6 @@
-package frostfire.bminsrelics.item;
+package frostfire.bminsrelics.item.relic;
 
+import frostfire.bminsrelics.item.Relic;
 import org.apache.logging.log4j.core.config.ConfiguratonFileWatcher;
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
@@ -16,7 +17,7 @@ import java.util.List;
 import java.util.Random;
 
 
-public class HomingBow extends Relic<EntityShootBowEvent> {
+public class HomingBow extends Relic {
 
     @Override
     public Relic init() {
@@ -33,7 +34,7 @@ public class HomingBow extends Relic<EntityShootBowEvent> {
         item = temp;
         return this;
     }
-    //@Override
+    @Override
     public void Activate(EntityShootBowEvent event) {
         if(event.getProjectile() instanceof Arrow && event.getEntity() instanceof Player) {
             Player player = (Player)event.getEntity();

@@ -1,5 +1,6 @@
 package frostfire.bminsrelics.item;
 
+import frostfire.bminsrelics.item.relic.*;
 import org.bukkit.inventory.ItemStack;
 
 public class ItemManager {
