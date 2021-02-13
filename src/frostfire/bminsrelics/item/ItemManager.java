@@ -4,7 +4,7 @@ import frostfire.bminsrelics.item.relic.*;
 import org.bukkit.inventory.ItemStack;
 
 public class ItemManager {
-    static Relic[] relics = {new RandomWand().init(), new Infinidirt().init(),new LightningHammer().init(),new TrickSword().init(),new HomingBow().init()};
+    public static Relic[] relics = {new RandomWand().init(), new Infinidirt().init(),new LightningHammer().init(),new TrickSword().init(),new HomingBow().init()};
     public static Relic GetRelic(String register) {
         for (Relic relic : relics) {
             if(relic.directory.equals(register)) {

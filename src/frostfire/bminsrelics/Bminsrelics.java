@@ -1,5 +1,6 @@
 package frostfire.bminsrelics;
 
+import frostfire.bminsrelics.commands.RelicCommandTabCompletion;
 import frostfire.bminsrelics.commands.RelicCommands;
 import frostfire.bminsrelics.data.Data;
 import frostfire.bminsrelics.events.RelicEvents;
@@ -13,6 +14,7 @@ public class Bminsrelics extends JavaPlugin {
     public void onEnable() {
         data = new Data(getDataFolder());
         getCommand("relic").setExecutor(new RelicCommands());
+        getCommand("relic").setTabCompleter(new RelicCommandTabCompletion());
         getCommand("checkpoint").setExecutor(new RelicCommands());
         getCommand("send").setExecutor(new RelicCommands());
         getServer().getPluginManager().registerEvents(new RelicEvents(), this);
