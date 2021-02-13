@@ -1,10 +1,13 @@
 package frostfire.bminsrelics.commands;
 
+import org.bukkit.Bukkit;
+import org.bukkit.Location;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
+import frostfire.bminsrelics.Bminsrelics;
 import frostfire.bminsrelics.item.ItemManager;
 import frostfire.bminsrelics.item.Relic;
 
@@ -26,6 +29,31 @@ public class RelicCommands implements CommandExecutor {
                 player.sendMessage("I've never heard of a "+args[0]+" before.");
             }
             return true;
+        }
+        else if(cmd.getName().equalsIgnoreCase("checkpoint")) {
+            if(!Bminsrelics.data.checkpoints.containsKey(args[0])) {
+                Bminsrelics.data.SetCheckpoint(args[0], player.getLocation());
+                Bminsrelics.data.saveData("relics.data");
+            }
+            else {
+                player.sendMessage("That's already a checkpoint!");
+            }
+        }
+        else if(cmd.getName().equalsIgnoreCase("send")) {
+            if(Bminsrelics.data.checkpoints.containsKey(args[1])) {
+                Location end = Bminsrelics.data.getLocationByName(args[1]);
+                Player otherPlayer = Bukkit.getPlayer(args[0]);
+                if(otherPlayer==null) {
+                    player.sendMessage("That player doesn't appear to be online.");
+                    return false;
+                }
+                otherPlayer.getWorld().strikeLightningEffect(otherPlayer.getLocation());
+                player.getWorld().strikeLightning(end);
+                otherPlayer.teleport(end);
+            }
+            else {
+                player.sendMessage("I don't recognize that checkpoint.");
+            }
         }
         return false;
     }

@@ -14,7 +14,6 @@ import org.bukkit.inventory.meta.ItemMeta;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 import java.util.UUID;
 
 
@@ -41,9 +40,8 @@ public class TrickSword extends Relic {
     @Override
     public void Activate(PlayerInteractEvent event) {
         Player player = event.getPlayer();
-        Random random = new Random();
         if(event.getAction() == Action.PHYSICAL) {
-            event.getItem().setAmount(0);
+            player.getInventory().remove(event.getItem());
         }
     }
     

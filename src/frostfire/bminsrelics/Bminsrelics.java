@@ -1,22 +1,27 @@
 package frostfire.bminsrelics;
 
 import frostfire.bminsrelics.commands.RelicCommands;
+import frostfire.bminsrelics.data.Data;
 import frostfire.bminsrelics.events.RelicEvents;
-import frostfire.bminsrelics.item.ItemManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class Bminsrelics extends JavaPlugin {
     public String version = "0.0.1";
     public String updatemsg = "";
+    public static Data data;
     @Override
     public void onEnable() {
+        data = Data.loadData("relics.data");
         getCommand("relic").setExecutor(new RelicCommands());
+        getCommand("checkpoint").setExecutor(new RelicCommands());
+        getCommand("send").setExecutor(new RelicCommands());
         getServer().getPluginManager().registerEvents(new RelicEvents(), this);
         getLogger().info("Ethan and Brendon's epic SMP plugin has been enabled.");
     }
 
     @Override
     public void onDisable() {
+        data.saveData("relics.data");
         getLogger().info("Ethan and Brendon's epic SMP plugin has been disabled.");
     }
 }

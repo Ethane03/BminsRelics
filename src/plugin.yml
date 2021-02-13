@@ -5,4 +5,14 @@ description: A really cool plugin for relics and a few other things probably
 commands:
   relic:
     description: Gives a relic
-    usage: /<command>
+    usage: /<command> [name]
+    permission: minecraft.command.gamemode
+    permission-message: You don't look like Bmin.
+  checkpoint:
+    description: Set a checkpoint
+    usage: /<command> [name]
+    permission: minecraft.command.gamemode
+  send:
+    description: Send to a checkpoint
+    usage: /<command> [player] [name]
+    permission: minecraft.command.gamemode
