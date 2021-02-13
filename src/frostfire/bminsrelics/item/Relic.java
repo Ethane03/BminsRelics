@@ -1,5 +1,7 @@
 package frostfire.bminsrelics.item;
 
+import org.bukkit.event.Event;
+import org.bukkit.event.entity.EntityEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
 

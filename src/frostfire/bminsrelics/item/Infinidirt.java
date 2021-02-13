@@ -38,5 +38,5 @@ public class Infinidirt extends Relic {
             player.getInventory().addItem(item);
         }
     }
-    
+}
 }
