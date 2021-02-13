@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.UUID;
 
 
-public class TrickSword extends Relic {
+public class TrickSword extends Relic<PlayerInteractEvent> {
 
     @Override
     public Relic init() {
@@ -37,10 +37,10 @@ public class TrickSword extends Relic {
         item = temp;
         return this;
     }
-    @Override
+    //@Override
     public void Activate(PlayerInteractEvent event) {
         Player player = event.getPlayer();
-        if(event.getAction() == Action.PHYSICAL) {
+        if(event.getAction() == Action.LEFT_CLICK_BLOCK) {
             player.getInventory().remove(event.getItem());
         }
     }

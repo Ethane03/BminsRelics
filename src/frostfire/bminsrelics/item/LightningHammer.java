@@ -12,7 +12,7 @@ import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
-public class LightningHammer extends Relic {
+public class LightningHammer extends Relic<PlayerInteractEvent> {
     @Override
     public Relic init() {
         directory = "lightning";
@@ -28,7 +28,7 @@ public class LightningHammer extends Relic {
         item = temp;
         return this;
     }
-    @Override
+    //@Override
     public void Activate(PlayerInteractEvent event) {
         Player player = event.getPlayer();
         if(event.getAction() == Action.LEFT_CLICK_AIR) {

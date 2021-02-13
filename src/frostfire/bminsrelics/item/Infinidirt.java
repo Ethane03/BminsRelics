@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class Infinidirt extends Relic {
+public class Infinidirt extends Relic<PlayerInteractEvent> {
 
     @Override
     public Relic init() {
@@ -31,7 +31,7 @@ public class Infinidirt extends Relic {
         item = temp;
         return this;
     }
-    @Override
+    //@Override
     public void Activate(PlayerInteractEvent event) {
         Player player = event.getPlayer();
         if(event.getAction() == Action.RIGHT_CLICK_BLOCK&&player.getGameMode()!=GameMode.ADVENTURE) {

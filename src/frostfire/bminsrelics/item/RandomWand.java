@@ -13,6 +13,7 @@ import org.bukkit.entity.Snowball;
 import org.bukkit.entity.SpectralArrow;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
+import org.bukkit.event.player.PlayerLevelChangeEvent;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
@@ -20,7 +21,7 @@ import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
 
-public class RandomWand extends Relic {
+public class RandomWand extends Relic<PlayerInteractEvent> {
 
     @Override
     public Relic init() {
@@ -37,7 +38,7 @@ public class RandomWand extends Relic {
         item = temp;
         return this;
     }
-    @Override
+    //@Override
     public void Activate(PlayerInteractEvent event) {
         Player player = event.getPlayer();
         Random random = new Random();

@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.Random;
 
 
-public class HomingBow extends Relic {
+public class HomingBow extends Relic<EntityShootBowEvent> {
 
     @Override
     public Relic init() {
