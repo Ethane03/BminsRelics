@@ -25,7 +25,7 @@ public class RelicEvents implements Listener {
         if(event.getBow() != null) {
             Relic relic = ItemManager.GetRelic(event.getBow());
             if(relic!=null) {
-                relic.Activate(event);
+                //relic.Activate(event);
             }
         }
     }
