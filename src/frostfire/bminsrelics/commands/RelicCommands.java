@@ -31,21 +31,17 @@ public class RelicCommands implements CommandExecutor {
             return true;
         }
         else if(cmd.getName().equalsIgnoreCase("checkpoint")) {
-            if(!Bminsrelics.data.checkpoints.containsKey(args[0])) {
-                Bminsrelics.data.SetCheckpoint(args[0], player.getLocation());
-                Bminsrelics.data.saveData("relics.data");
-            }
-            else {
-                player.sendMessage("This checkpoint name already exists!");
-            }
+            Bminsrelics.data.AddLocation(args[0], player.getLocation());
         }
         else if(cmd.getName().equalsIgnoreCase("send")) {
-            if(Bminsrelics.data.checkpoints.containsKey(args[1])) {
-                Location end = Bminsrelics.data.getLocationByName(args[1]);
+                Location end = Bminsrelics.data.GetLocation(args[0]);
                 Player otherPlayer = Bukkit.getPlayer(args[0]);
                 if(otherPlayer==null) {
                     player.sendMessage("That player doesn't appear to be online.");
                     return false;
+                }
+                else if(end==null) {
+                    player.sendMessage("I don't recognize that checkpoint");
                 }
                 otherPlayer.getWorld().strikeLightningEffect(otherPlayer.getLocation());
                 player.getWorld().strikeLightning(end);
@@ -54,7 +50,6 @@ public class RelicCommands implements CommandExecutor {
             else {
                 player.sendMessage("I don't recognize that checkpoint.");
             }
-        }
         return false;
     }
 }

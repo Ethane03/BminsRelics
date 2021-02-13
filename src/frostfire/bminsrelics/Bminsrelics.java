@@ -11,7 +11,7 @@ public class Bminsrelics extends JavaPlugin {
     public static Data data;
     @Override
     public void onEnable() {
-        data = Data.loadData("relics.data");
+        data = new Data(getDataFolder());
         getCommand("relic").setExecutor(new RelicCommands());
         getCommand("checkpoint").setExecutor(new RelicCommands());
         getCommand("send").setExecutor(new RelicCommands());
@@ -21,7 +21,6 @@ public class Bminsrelics extends JavaPlugin {
 
     @Override
     public void onDisable() {
-        data.saveData("relics.data");
         getLogger().info("Ethan and Brendon's epic SMP plugin has been disabled.");
     }
 }

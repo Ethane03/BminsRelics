@@ -1,21 +1,16 @@
 package frostfire.bminsrelics.item.relic;
 
 import frostfire.bminsrelics.item.Relic;
-import org.apache.logging.log4j.core.config.ConfiguratonFileWatcher;
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.*;
-import org.bukkit.event.block.Action;
 import org.bukkit.event.entity.EntityShootBowEvent;
-import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
-
 
 public class HomingBow extends Relic {
 
@@ -37,7 +32,6 @@ public class HomingBow extends Relic {
     @Override
     public void Activate(EntityShootBowEvent event) {
         if(event.getProjectile() instanceof Arrow && event.getEntity() instanceof Player) {
-            Player player = (Player)event.getEntity();
             Arrow arrow = (Arrow) event.getProjectile();
             if ((event.getEntity() instanceof Player)) {
                 WitherSkull s = event.getEntity().getWorld().spawn(arrow.getLocation(), WitherSkull.class);

@@ -8,7 +8,6 @@ import org.bukkit.event.player.PlayerInteractEvent;
 import frostfire.bminsrelics.item.ItemManager;
 import frostfire.bminsrelics.item.Relic;
 
-import javax.swing.text.html.parser.Entity;
 
 public class RelicEvents implements Listener {
 
