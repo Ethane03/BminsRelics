@@ -36,7 +36,7 @@ public class RelicCommands implements CommandExecutor {
                 Bminsrelics.data.saveData("relics.data");
             }
             else {
-                player.sendMessage("That's already a checkpoint!");
+                player.sendMessage("This checkpoint name already exists!");
             }
         }
         else if(cmd.getName().equalsIgnoreCase("send")) {
