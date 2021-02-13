@@ -35,7 +35,7 @@ public class Infinidirt extends Relic {
     public void Activate(PlayerInteractEvent event) {
         Player player = event.getPlayer();
         Random random = new Random();
-        if(event.getAction() == Action.RIGHT_CLICK_BLOCK) {
+        if(event.getAction() == Action.RIGHT_CLICK_BLOCK && !event.isCancelled()) {
         //Change for how many switch cases you have.
         event.getItem().setAmount(1);
     }

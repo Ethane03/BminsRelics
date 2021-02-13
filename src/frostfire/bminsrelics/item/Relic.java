@@ -1,5 +1,7 @@
 package frostfire.bminsrelics.item;
 
+import org.bukkit.event.Event;
+import org.bukkit.event.entity.EntityEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
 
@@ -10,5 +12,5 @@ public abstract class Relic {
     public Relic init() {
         return null;
     }
-    public void Activate(PlayerInteractEvent event){};
+    public void Activate(Event event){};
 }
