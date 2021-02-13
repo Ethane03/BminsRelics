@@ -4,6 +4,9 @@ import frostfire.bminsrelics.commands.RelicCommandTabCompletion;
 import frostfire.bminsrelics.commands.RelicCommands;
 import frostfire.bminsrelics.data.Data;
 import frostfire.bminsrelics.events.RelicEvents;
+
+import org.bukkit.configuration.file.FileConfiguration;
+import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class Bminsrelics extends JavaPlugin {
@@ -20,7 +23,6 @@ public class Bminsrelics extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new RelicEvents(), this);
         getLogger().info("Ethan and Brendon's epic SMP plugin has been enabled.");
     }
-
     @Override
     public void onDisable() {
         getLogger().info("Ethan and Brendon's epic SMP plugin has been disabled.");

@@ -34,7 +34,9 @@ public class RelicCommands implements CommandExecutor {
             Bminsrelics.data.AddLocation(args[0], player.getLocation());
         }
         else if(cmd.getName().equalsIgnoreCase("send")) {
-                Location end = Bminsrelics.data.GetLocation(args[0]);
+                player.sendMessage("Let's get that location!");
+                Location end = Bminsrelics.data.GetLocation(args[0],player);
+                player.sendMessage("We got this far.");
                 Player otherPlayer = Bukkit.getPlayer(args[0]);
                 if(otherPlayer==null) {
                     player.sendMessage("That player doesn't appear to be online.");
@@ -42,14 +44,15 @@ public class RelicCommands implements CommandExecutor {
                 }
                 else if(end==null) {
                     player.sendMessage("I don't recognize that checkpoint");
+                    return false;
                 }
                 otherPlayer.getWorld().strikeLightningEffect(otherPlayer.getLocation());
-                player.getWorld().strikeLightning(end);
+                end.getWorld().strikeLightningEffect(end);
+                player.sendMessage("lightning!");
                 otherPlayer.teleport(end);
-            }
-            else {
-                player.sendMessage("I don't recognize that checkpoint.");
-            }
+                player.sendMessage("Teleport!");
+                return true;
+        }
         return false;
     }
 }
