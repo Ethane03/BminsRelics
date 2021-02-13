@@ -7,6 +7,8 @@ import org.bukkit.attribute.AttributeModifier;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.event.block.Action;
+import org.bukkit.event.entity.EntityDamageByEntityEvent;
+import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.inventory.ItemFlag;
@@ -39,10 +41,10 @@ public class TrickSword extends Relic {
         return this;
     }
     @Override
-    public void Activate(PlayerInteractEvent event) {
-        Player player = event.getPlayer();
-        if(event.getAction() == Action.LEFT_CLICK_BLOCK) {
-            player.getInventory().remove(event.getItem());
+    public void Activate(EntityDamageByEntityEvent event) {
+        if(event.getDamager() instanceof Player) {
+            Player player = (Player) event.getDamager();
+            player.getInventory().remove(((Player) event.getDamager()).getInventory().getItemInMainHand());
         }
     }
     
