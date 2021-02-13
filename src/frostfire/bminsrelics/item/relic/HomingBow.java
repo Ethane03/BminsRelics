@@ -12,6 +12,8 @@ import org.bukkit.inventory.meta.ItemMeta;
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.bukkit.Bukkit.getLogger;
+
 public class HomingBow extends Relic {
 
     @Override
@@ -31,6 +33,7 @@ public class HomingBow extends Relic {
     }
     @Override
     public void Activate(EntityShootBowEvent event) {
+        getLogger().info("well something worked");
         if(event.getProjectile() instanceof Arrow && event.getEntity() instanceof Player) {
             Arrow arrow = (Arrow) event.getProjectile();
             if ((event.getEntity() instanceof Player)) {
