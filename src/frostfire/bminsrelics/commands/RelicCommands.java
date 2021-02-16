@@ -2,6 +2,7 @@ package frostfire.bminsrelics.commands;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
+import org.bukkit.Particle;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -34,25 +35,38 @@ public class RelicCommands implements CommandExecutor {
             Bminsrelics.data.AddLocation(args[0], player.getLocation());
         }
         else if(cmd.getName().equalsIgnoreCase("send")) {
-                player.sendMessage("Let's get that location!");
-                Location end = Bminsrelics.data.GetLocation(args[0],player);
-                player.sendMessage("We got this far.");
-                Player otherPlayer = Bukkit.getPlayer(args[0]);
-                if(otherPlayer==null) {
-                    player.sendMessage("That player doesn't appear to be online.");
-                    return false;
+            if(args[0].equalsIgnoreCase("@a")){
+                for(Player players : Bukkit.getOnlinePlayers()){
+                    SendCommand(players.getName(), args[1]);
                 }
-                else if(end==null) {
-                    player.sendMessage("I don't recognize that checkpoint");
-                    return false;
-                }
-                otherPlayer.getWorld().strikeLightningEffect(otherPlayer.getLocation());
-                end.getWorld().strikeLightningEffect(end);
-                player.sendMessage("lightning!");
-                otherPlayer.teleport(end);
-                player.sendMessage("Teleport!");
                 return true;
+            }
+            else {
+                return SendCommand(args[0], args[1]);
+            }
         }
         return false;
+    }
+
+    private boolean SendCommand(String player, String name) {
+        Location end;
+        if(name.equals("back")) {
+            end = Bminsrelics.data.GetLocation("back."+player);
+        }
+        else {
+            end = Bminsrelics.data.GetLocation(name);
+        }
+        Player otherPlayer = Bukkit.getPlayer(player);
+        if(otherPlayer==null) {
+            return false;
+        }
+        else if(end==null) {
+            return false;
+        }
+        otherPlayer.getWorld().spawnParticle(Particle.EXPLOSION_HUGE, otherPlayer.getLocation(), 5);
+        Bminsrelics.data.AddLocation("back."+player, otherPlayer.getLocation());
+        end.getWorld().spawnParticle(Particle.EXPLOSION_HUGE, end, 1);
+        otherPlayer.teleport(end);
+        return true;
     }
 }

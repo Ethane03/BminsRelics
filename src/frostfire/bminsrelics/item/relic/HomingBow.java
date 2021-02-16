@@ -21,9 +21,10 @@ public class HomingBow extends Relic {
         directory = "homingbow";
         ItemStack temp = new ItemStack(Material.BOW);
         ItemMeta meta = temp.getItemMeta();
-        meta.setDisplayName("§6Homing Bow");
+        meta.setDisplayName("§6Skull Bow");
         List<String> lore = new ArrayList<>();
-        lore.add("§3Swarm your enemies with magical cubes from the end");
+        lore.add("§3Feel the Wither");
+        lore.add("§3Be the Wither");
         meta.setLore(lore);
         meta.addEnchant(Enchantment.MENDING, 1, false);
         meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);

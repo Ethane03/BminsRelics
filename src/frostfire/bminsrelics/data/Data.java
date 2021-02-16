@@ -31,18 +31,23 @@ public class Data {
             }
         }
     }
-    public Location GetLocation(String name,Player player) {
+    public Location GetLocation(String name) {
         File file = new File(folder, "checkpoints.yml");
-        YamlConfiguration config = YamlConfiguration.loadConfiguration(file);
+        YamlConfiguration config = new YamlConfiguration();
         double x,y,z;
-        player.sendMessage(config.getName());
-        player.sendMessage(String.valueOf(config==null));
+        try {
+            config.load(file);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (InvalidConfigurationException e) {
+            e.printStackTrace();
+        }
         x=config.getDouble(name+".x");
         y=config.getDouble(name+".y");
         z=config.getDouble(name+".z");
-        player.sendMessage(String.valueOf(x));
-        String world = configFile.getString(name+".w");
-        player.sendMessage(world);
+        String world = config.getString(name+".w");
         World w = Bukkit.getServer().getWorld(world);
         return new Location(w, x, y, z);
     }
