@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="BminsRelics:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/BminsRelics_jar</output-path>
+    <root id="archive" name="BminsRelics.jar">
+      <element id="module-output" name="BminsRelics" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,915 @@
+Index: .idea/uiDesigner.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/uiDesigner.xml	(date 1613254366251)
++++ .idea/uiDesigner.xml	(date 1613254366251)
+@@ -0,0 +1,124 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="Palette2">
++    <group name="Swing">
++      <item class="com.intellij.uiDesigner.HSpacer" tooltip-text="Horizontal Spacer" icon="/com/intellij/uiDesigner/icons/hspacer.png" removable="false" auto-create-binding="false" can-attach-label="false">
++        <default-constraints vsize-policy="1" hsize-policy="6" anchor="0" fill="1" />
++      </item>
++      <item class="com.intellij.uiDesigner.VSpacer" tooltip-text="Vertical Spacer" icon="/com/intellij/uiDesigner/icons/vspacer.png" removable="false" auto-create-binding="false" can-attach-label="false">
++        <default-constraints vsize-policy="6" hsize-policy="1" anchor="0" fill="2" />
++      </item>
++      <item class="javax.swing.JPanel" icon="/com/intellij/uiDesigner/icons/panel.png" removable="false" auto-create-binding="false" can-attach-label="false">
++        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3" />
++      </item>
++      <item class="javax.swing.JScrollPane" icon="/com/intellij/uiDesigner/icons/scrollPane.png" removable="false" auto-create-binding="false" can-attach-label="true">
++        <default-constraints vsize-policy="7" hsize-policy="7" anchor="0" fill="3" />
++      </item>
++      <item class="javax.swing.JButton" icon="/com/intellij/uiDesigner/icons/button.png" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="0" hsize-policy="3" anchor="0" fill="1" />
++        <initial-values>
++          <property name="text" value="Button" />
++        </initial-values>
++      </item>
++      <item class="javax.swing.JRadioButton" icon="/com/intellij/uiDesigner/icons/radioButton.png" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="0" hsize-policy="3" anchor="8" fill="0" />
++        <initial-values>
++          <property name="text" value="RadioButton" />
++        </initial-values>
++      </item>
++      <item class="javax.swing.JCheckBox" icon="/com/intellij/uiDesigner/icons/checkBox.png" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="0" hsize-policy="3" anchor="8" fill="0" />
++        <initial-values>
++          <property name="text" value="CheckBox" />
++        </initial-values>
++      </item>
++      <item class="javax.swing.JLabel" icon="/com/intellij/uiDesigner/icons/label.png" removable="false" auto-create-binding="false" can-attach-label="false">
++        <default-constraints vsize-policy="0" hsize-policy="0" anchor="8" fill="0" />
++        <initial-values>
++          <property name="text" value="Label" />
++        </initial-values>
++      </item>
++      <item class="javax.swing.JTextField" icon="/com/intellij/uiDesigner/icons/textField.png" removable="false" auto-create-binding="true" can-attach-label="true">
++        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
++          <preferred-size width="150" height="-1" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JPasswordField" icon="/com/intellij/uiDesigner/icons/passwordField.png" removable="false" auto-create-binding="true" can-attach-label="true">
++        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
++          <preferred-size width="150" height="-1" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JFormattedTextField" icon="/com/intellij/uiDesigner/icons/formattedTextField.png" removable="false" auto-create-binding="true" can-attach-label="true">
++        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
++          <preferred-size width="150" height="-1" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JTextArea" icon="/com/intellij/uiDesigner/icons/textArea.png" removable="false" auto-create-binding="true" can-attach-label="true">
++        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
++          <preferred-size width="150" height="50" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JTextPane" icon="/com/intellij/uiDesigner/icons/textPane.png" removable="false" auto-create-binding="true" can-attach-label="true">
++        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
++          <preferred-size width="150" height="50" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JEditorPane" icon="/com/intellij/uiDesigner/icons/editorPane.png" removable="false" auto-create-binding="true" can-attach-label="true">
++        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
++          <preferred-size width="150" height="50" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JComboBox" icon="/com/intellij/uiDesigner/icons/comboBox.png" removable="false" auto-create-binding="true" can-attach-label="true">
++        <default-constraints vsize-policy="0" hsize-policy="2" anchor="8" fill="1" />
++      </item>
++      <item class="javax.swing.JTable" icon="/com/intellij/uiDesigner/icons/table.png" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
++          <preferred-size width="150" height="50" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JList" icon="/com/intellij/uiDesigner/icons/list.png" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="6" hsize-policy="2" anchor="0" fill="3">
++          <preferred-size width="150" height="50" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JTree" icon="/com/intellij/uiDesigner/icons/tree.png" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
++          <preferred-size width="150" height="50" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JTabbedPane" icon="/com/intellij/uiDesigner/icons/tabbedPane.png" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3">
++          <preferred-size width="200" height="200" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JSplitPane" icon="/com/intellij/uiDesigner/icons/splitPane.png" removable="false" auto-create-binding="false" can-attach-label="false">
++        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3">
++          <preferred-size width="200" height="200" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JSpinner" icon="/com/intellij/uiDesigner/icons/spinner.png" removable="false" auto-create-binding="true" can-attach-label="true">
++        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1" />
++      </item>
++      <item class="javax.swing.JSlider" icon="/com/intellij/uiDesigner/icons/slider.png" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1" />
++      </item>
++      <item class="javax.swing.JSeparator" icon="/com/intellij/uiDesigner/icons/separator.png" removable="false" auto-create-binding="false" can-attach-label="false">
++        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3" />
++      </item>
++      <item class="javax.swing.JProgressBar" icon="/com/intellij/uiDesigner/icons/progressbar.png" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="0" hsize-policy="6" anchor="0" fill="1" />
++      </item>
++      <item class="javax.swing.JToolBar" icon="/com/intellij/uiDesigner/icons/toolbar.png" removable="false" auto-create-binding="false" can-attach-label="false">
++        <default-constraints vsize-policy="0" hsize-policy="6" anchor="0" fill="1">
++          <preferred-size width="-1" height="20" />
++        </default-constraints>
++      </item>
++      <item class="javax.swing.JToolBar$Separator" icon="/com/intellij/uiDesigner/icons/toolbarSeparator.png" removable="false" auto-create-binding="false" can-attach-label="false">
++        <default-constraints vsize-policy="0" hsize-policy="0" anchor="0" fill="1" />
++      </item>
++      <item class="javax.swing.JScrollBar" icon="/com/intellij/uiDesigner/icons/scrollbar.png" removable="false" auto-create-binding="true" can-attach-label="false">
++        <default-constraints vsize-policy="6" hsize-policy="0" anchor="0" fill="2" />
++      </item>
++    </group>
++  </component>
++</project>
+\ No newline at end of file
+Index: out/production/BminsRelics/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- out/production/BminsRelics/.gitignore	(date 1613011089634)
++++ out/production/BminsRelics/.gitignore	(date 1613011089634)
+@@ -0,0 +1,4 @@
++# Default ignored files
++/shelf/
++/.idea/workspace.xml
++.vscode
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_2_11_2021_3_04_PM_[Default_Changelist]/shelved.patch
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/shelf/Uncommitted_changes_before_Update_at_2_11_2021_3_04_PM_[Default_Changelist]/shelved.patch	(date 1613077492376)
++++ .idea/shelf/Uncommitted_changes_before_Update_at_2_11_2021_3_04_PM_[Default_Changelist]/shelved.patch	(date 1613077492376)
+@@ -0,0 +1,22 @@
++Index: src/plugin.yml
++IDEA additional info:
++Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
++<+>name: Relics\r\nmain: frostfire.relics.Bminsrelics\r\nversion: 0.0.1\r\ndescription: A really cool plugin for relics and a few other things probably\r\ncommands:\r\n  relic:\r\n    description: Gives a relic\r\n    usage: /<command> [relic]
++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++<+>UTF-8
++===================================================================
++--- src/plugin.yml	(revision 6f65d77fa39b5860d037a6a4aaddaea9b0c78a58)
+++++ src/plugin.yml	(date 1613075305577)
++@@ -1,8 +1,8 @@
++ name: Relics
++-main: frostfire.relics.Bminsrelics
+++main: frostfire.bminsrelics.Bminsrelics
++ version: 0.0.1
++ description: A really cool plugin for relics and a few other things probably
++ commands:
++   relic:
++     description: Gives a relic
++-    usage: /<command> [relic]
++\ No newline at end of file
+++    usage: /<command>
++\ No newline at end of file
+Index: out/production/BminsRelics/plugin.yml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- out/production/BminsRelics/plugin.yml	(date 1613077493771)
++++ out/production/BminsRelics/plugin.yml	(date 1613077493771)
+@@ -0,0 +1,8 @@
++name: BminsRelics
++main: frostfire.bminsrelics.Bminsrelics
++version: 0.0.1
++description: A really cool plugin for relics and a few other things probably
++commands:
++  relic:
++    description: Gives a relic
++    usage: /<command>
+\ No newline at end of file
+Index: .idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/modules.xml	(date 1613010231681)
++++ .idea/modules.xml	(date 1613010231681)
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectModuleManager">
++    <modules>
++      <module fileurl="file://$PROJECT_DIR$/BminsRelics.iml" filepath="$PROJECT_DIR$/BminsRelics.iml" />
++    </modules>
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/misc.xml	(date 1613010231669)
++++ .idea/misc.xml	(date 1613010231669)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
++    <output url="file://$PROJECT_DIR$/out" />
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/artifacts/BminsRelics_jar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/artifacts/BminsRelics_jar.xml	(date 1613074363511)
++++ .idea/artifacts/BminsRelics_jar.xml	(date 1613074363511)
+@@ -0,0 +1,8 @@
++<component name="ArtifactManager">
++  <artifact type="jar" name="BminsRelics:jar">
++    <output-path>$PROJECT_DIR$/out/artifacts/BminsRelics_jar</output-path>
++    <root id="archive" name="BminsRelics.jar">
++      <element id="module-output" name="BminsRelics" />
++    </root>
++  </artifact>
++</component>
+\ No newline at end of file
+Index: .idea/libraries/spigot_1_16_5.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/libraries/spigot_1_16_5.xml	(date 1613010247305)
++++ .idea/libraries/spigot_1_16_5.xml	(date 1613010247305)
+@@ -0,0 +1,11 @@
++<component name="libraryTable">
++  <library name="spigot-1.16.5">
++    <CLASSES>
++      <root url="jar://$USER_HOME$/Downloads/spigot-1.16.5.jar!/" />
++    </CLASSES>
++    <JAVADOC />
++    <SOURCES>
++      <root url="jar://$USER_HOME$/Downloads/spigot-1.16.5.jar!/" />
++    </SOURCES>
++  </library>
++</component>
+\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_2_11_2021_3_04_PM__Default_Changelist_.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/shelf/Uncommitted_changes_before_Update_at_2_11_2021_3_04_PM__Default_Changelist_.xml	(date 1613350298230)
++++ .idea/shelf/Uncommitted_changes_before_Update_at_2_11_2021_3_04_PM__Default_Changelist_.xml	(date 1613350298230)
+@@ -0,0 +1,4 @@
++<changelist name="Uncommitted_changes_before_Update_at_2_11_2021_3_04_PM_[Default_Changelist]" date="1613077493854" recycled="true" deleted="true">
++  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2_11_2021_3_04_PM_[Default_Changelist]/shelved.patch" />
++  <option name="DESCRIPTION" value="Uncommitted changes before Update at 2/11/2021 3:04 PM [Default Changelist]" />
++</changelist>
+\ No newline at end of file
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/vcs.xml	(date 1613010312209)
++++ .idea/vcs.xml	(date 1613010312209)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="$PROJECT_DIR$" vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+Index: BminsRelics.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- BminsRelics.iml	(date 1613010247280)
++++ BminsRelics.iml	(date 1613010247280)
+@@ -0,0 +1,12 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="JAVA_MODULE" version="4">
++  <component name="NewModuleRootManager" inherit-compiler-output="true">
++    <exclude-output />
++    <content url="file://$MODULE_DIR$">
++      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
++    </content>
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++    <orderEntry type="library" name="spigot-1.16.5" level="project" />
++  </component>
++</module>
+\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_2_11_2021_2_24_PM_[Default_Changelist]/shelved.patch
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/shelf/Uncommitted_changes_before_Update_at_2_11_2021_2_24_PM_[Default_Changelist]/shelved.patch	(date 1613075083715)
++++ .idea/shelf/Uncommitted_changes_before_Update_at_2_11_2021_2_24_PM_[Default_Changelist]/shelved.patch	(date 1613075083715)
+@@ -0,0 +1,16 @@
++Index: src/plugin.yml
++IDEA additional info:
++Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
++<+>name: Relics\r\nmain: frostfire.relics.Relics\r\nversion: 0.0.1\r\ndescription: A really cool plugin for relics and a few other things probably\r\ncommands:\r\n  relic:\r\n    description: Gives a relic\r\n    usage: /<command>
++Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
++<+>UTF-8
++===================================================================
++--- src/plugin.yml	(revision 35608552a59ae02a5f69a5b168f96f8fb40bc823)
+++++ src/plugin.yml	(date 1613074894159)
++@@ -1,5 +1,5 @@
++ name: Relics
++-main: frostfire.relics.Relics
+++main: frostfire.bminsrelics.Bminsrelics
++ version: 0.0.1
++ description: A really cool plugin for relics and a few other things probably
++ commands:
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/workspace.xml	(date 1613350411160)
++++ .idea/workspace.xml	(date 1613350411160)
+@@ -0,0 +1,301 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ArtifactsWorkspaceSettings">
++    <artifacts-to-build>
++      <artifact name="BminsRelics:jar" />
++    </artifacts-to-build>
++  </component>
++  <component name="BranchesTreeState">
++    <expand>
++      <path>
++        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
++        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
++      </path>
++      <path>
++        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
++        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
++      </path>
++      <path>
++        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
++        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
++        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
++      </path>
++    </expand>
++    <select>
++      <path>
++        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
++        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
++        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
++        <item name="BRANCH:origin/master" type="e8cecc67:BranchNodeDescriptor" />
++      </path>
++    </select>
++  </component>
++  <component name="ChangeListManager">
++    <list default="true" id="baed5fb0-70b3-401f-adaa-ed7de37e8c39" name="Default Changelist" comment="">
++      <change afterPath="$PROJECT_DIR$/.idea/artifacts/BminsRelics_jar.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/libraries/spigot_1_16_5.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2_11_2021_2_24_PM_[Default_Changelist]/shelved.patch" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2_11_2021_2_24_PM__Default_Changelist_.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2_11_2021_3_04_PM_[Default_Changelist]/shelved.patch" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2_11_2021_3_04_PM__Default_Changelist_.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/BminsRelics.iml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/out/artifacts/BminsRelics_jar/BminsRelics.jar" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/out/production/BminsRelics/.gitignore" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/out/production/BminsRelics/frostfire/bminsrelics/Bminsrelics.class" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/out/production/BminsRelics/frostfire/bminsrelics/commands/RelicCommands.class" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/out/production/BminsRelics/frostfire/bminsrelics/events/RelicEvents.class" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/out/production/BminsRelics/frostfire/bminsrelics/item/ItemManager.class" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/out/production/BminsRelics/frostfire/bminsrelics/item/RandomWand.class" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/out/production/BminsRelics/frostfire/bminsrelics/item/Relic.class" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/out/production/BminsRelics/plugin.yml" afterDir="false" />
++    </list>
++    <option name="SHOW_DIALOG" value="false" />
++    <option name="HIGHLIGHT_CONFLICTS" value="true" />
++    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
++    <option name="LAST_RESOLUTION" value="IGNORE" />
++  </component>
++  <component name="FileTemplateManagerImpl">
++    <option name="RECENT_TEMPLATES">
++      <list>
++        <option value="Class" />
++      </list>
++    </option>
++  </component>
++  <component name="Git.Settings">
++    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
++  </component>
++  <component name="ProjectId" id="1oJghwxTNOg7y2pXiEG9moJmIfX" />
++  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
++  <component name="ProjectViewState">
++    <option name="showLibraryContents" value="true" />
++  </component>
++  <component name="PropertiesComponent">
++    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
++    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
++    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/spigot-1.16.5.jar!/" />
++    <property name="project.structure.last.edited" value="Artifacts" />
++    <property name="project.structure.proportion" value="0.0" />
++    <property name="project.structure.side.proportion" value="0.2" />
++  </component>
++  <component name="RecentsManager">
++    <key name="CopyClassDialog.RECENTS_KEY">
++      <recent name="frostfire.bminsrelics.item" />
++    </key>
++    <key name="MoveFile.RECENT_KEYS">
++      <recent name="C:\Users\rcili\Desktop\Development\Plugins\BminsRelics\src" />
++    </key>
++  </component>
++  <component name="RunManager">
++    <configuration default="true" type="Application" factoryName="Application">
++      <module name="BminsRelics" />
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++  </component>
++  <component name="SvnConfiguration">
++    <configuration />
++  </component>
++  <component name="TaskManager">
++    <task active="true" id="Default" summary="Default task">
++      <changelist id="baed5fb0-70b3-401f-adaa-ed7de37e8c39" name="Default Changelist" comment="" />
++      <created>1613010229362</created>
++      <option name="number" value="Default" />
++      <option name="presentableId" value="Default" />
++      <updated>1613010229362</updated>
++    </task>
++    <task id="LOCAL-00001" summary="More setup">
++      <created>1613010684894</created>
++      <option name="number" value="00001" />
++      <option name="presentableId" value="LOCAL-00001" />
++      <option name="project" value="LOCAL" />
++      <updated>1613010684894</updated>
++    </task>
++    <task id="LOCAL-00002" summary="Pogwand">
++      <created>1613011967609</created>
++      <option name="number" value="00002" />
++      <option name="presentableId" value="LOCAL-00002" />
++      <option name="project" value="LOCAL" />
++      <updated>1613011967609</updated>
++    </task>
++    <task id="LOCAL-00003" summary="Infinidirt?">
++      <created>1613091532328</created>
++      <option name="number" value="00003" />
++      <option name="presentableId" value="LOCAL-00003" />
++      <option name="project" value="LOCAL" />
++      <updated>1613091532328</updated>
++    </task>
++    <task id="LOCAL-00004" summary="Swrod of godsw?">
++      <created>1613092161668</created>
++      <option name="number" value="00004" />
++      <option name="presentableId" value="LOCAL-00004" />
++      <option name="project" value="LOCAL" />
++      <updated>1613092161668</updated>
++    </task>
++    <task id="LOCAL-00005" summary="Swrod of godsw? again">
++      <created>1613092192997</created>
++      <option name="number" value="00005" />
++      <option name="presentableId" value="LOCAL-00005" />
++      <option name="project" value="LOCAL" />
++      <updated>1613092192997</updated>
++    </task>
++    <task id="LOCAL-00006" summary="Fixed the infidirt adventure mode problem, I think, and added a wither skull bow because I cant figure out how to set the shulkerbullet target.">
++      <created>1613239941061</created>
++      <option name="number" value="00006" />
++      <option name="presentableId" value="LOCAL-00006" />
++      <option name="project" value="LOCAL" />
++      <updated>1613239941061</updated>
++    </task>
++    <task id="LOCAL-00007" summary="stuff. we will re do this">
++      <created>1613252802511</created>
++      <option name="number" value="00007" />
++      <option name="presentableId" value="LOCAL-00007" />
++      <option name="project" value="LOCAL" />
++      <updated>1613252802511</updated>
++    </task>
++    <task id="LOCAL-00008" summary="Stuff">
++      <created>1613253956881</created>
++      <option name="number" value="00008" />
++      <option name="presentableId" value="LOCAL-00008" />
++      <option name="project" value="LOCAL" />
++      <updated>1613253956881</updated>
++    </task>
++    <task id="LOCAL-00009" summary="Redid the multiple option Activate.">
++      <created>1613254557641</created>
++      <option name="number" value="00009" />
++      <option name="presentableId" value="LOCAL-00009" />
++      <option name="project" value="LOCAL" />
++      <updated>1613254557641</updated>
++    </task>
++    <task id="LOCAL-00010" summary="Tab completion">
++      <created>1613255269561</created>
++      <option name="number" value="00010" />
++      <option name="presentableId" value="LOCAL-00010" />
++      <option name="project" value="LOCAL" />
++      <updated>1613255269561</updated>
++    </task>
++    <task id="LOCAL-00011" summary="Toothpick fixes">
++      <created>1613260083113</created>
++      <option name="number" value="00011" />
++      <option name="presentableId" value="LOCAL-00011" />
++      <option name="project" value="LOCAL" />
++      <updated>1613260083113</updated>
++    </task>
++    <task id="LOCAL-00012" summary="logs">
++      <created>1613260243125</created>
++      <option name="number" value="00012" />
++      <option name="presentableId" value="LOCAL-00012" />
++      <option name="project" value="LOCAL" />
++      <updated>1613260243125</updated>
++    </task>
++    <task id="LOCAL-00013" summary="fixed events for both trick sword and bow">
++      <created>1613350358608</created>
++      <option name="number" value="00013" />
++      <option name="presentableId" value="LOCAL-00013" />
++      <option name="project" value="LOCAL" />
++      <updated>1613350358608</updated>
++    </task>
++    <option name="localTasksCounter" value="14" />
++    <servers />
++  </component>
++  <component name="Vcs.Log.Tabs.Properties">
++    <option name="TAB_STATES">
++      <map>
++        <entry key="MAIN">
++          <value>
++            <State>
++              <option name="FILTERS">
++                <map>
++                  <entry key="branch">
++                    <value>
++                      <list>
++                        <option value="origin/master" />
++                      </list>
++                    </value>
++                  </entry>
++                </map>
++              </option>
++            </State>
++          </value>
++        </entry>
++      </map>
++    </option>
++    <option name="oldMeFiltersMigrated" value="true" />
++  </component>
++  <component name="VcsManagerConfiguration">
++    <MESSAGE value="More setup" />
++    <MESSAGE value="Pogwand" />
++    <MESSAGE value="Infinidirt?" />
++    <MESSAGE value="Swrod of godsw?" />
++    <MESSAGE value="Fixed the infidirt adventure mode problem, I think, and added a wither skull bow because I cant figure out how to set the shulkerbullet target." />
++    <MESSAGE value="I might have fixed it?" />
++    <MESSAGE value="stuff. we will re do this" />
++    <MESSAGE value="Stuff" />
++    <MESSAGE value="Redid the multiple option Activate." />
++    <MESSAGE value="Tab completion" />
++    <MESSAGE value="Toothpick fixes" />
++    <MESSAGE value="Swrod of godsw? again" />
++    <MESSAGE value="logs" />
++    <MESSAGE value="fixed events for both trick sword and bow" />
++    <option name="LAST_COMMIT_MESSAGE" value="" />
++  </component>
++  <component name="WindowStateProjectService">
++    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1613012703263">
++      <screen x="0" y="0" width="1536" height="824" />
++    </state>
++    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1613012703263" />
++    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser" timestamp="1613254923972">
++      <screen x="0" y="0" width="1536" height="824" />
++    </state>
++    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1613254923972" />
++    <state x="498" y="202" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1613012662086">
++      <screen x="0" y="0" width="1536" height="824" />
++    </state>
++    <state x="498" y="202" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1613012662086" />
++    <state x="551" y="306" width="433" height="217" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1613238138713">
++      <screen x="0" y="0" width="1536" height="824" />
++    </state>
++    <state x="551" y="306" width="433" height="217" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" timestamp="1613238138713" />
++    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1613238221368">
++      <screen x="0" y="0" width="1536" height="824" />
++    </state>
++    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1613238221368" />
++    <state x="473" y="153" key="FileChooserDialogImpl" timestamp="1613010243896">
++      <screen x="0" y="0" width="1536" height="824" />
++    </state>
++    <state x="473" y="153" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1613010243896" />
++    <state x="643" y="310" key="Github.ShareDialog" timestamp="1613010299361">
++      <screen x="0" y="0" width="1536" height="824" />
++    </state>
++    <state x="643" y="310" key="Github.ShareDialog/0.0.1536.824@0.0.1536.824" timestamp="1613010299361" />
++    <state x="514" y="117" key="Github.UntrackedFilesDialog" timestamp="1613010306319">
++      <screen x="0" y="0" width="1536" height="824" />
++    </state>
++    <state x="514" y="117" key="Github.UntrackedFilesDialog/0.0.1536.824@0.0.1536.824" timestamp="1613010306319" />
++    <state x="147" y="64" key="MergeDialog" timestamp="1613075091370">
++      <screen x="0" y="0" width="1536" height="824" />
++    </state>
++    <state x="147" y="64" key="MergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1613075091370" />
++    <state x="249" y="0" key="SettingsEditor" timestamp="1613074873365">
++      <screen x="0" y="0" width="1536" height="824" />
++    </state>
++    <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1613074873365" />
++    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1613350360524">
++      <screen x="0" y="0" width="1536" height="824" />
++    </state>
++    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1613350360524" />
++    <state x="578" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1613350143316">
++      <screen x="0" y="0" width="1536" height="824" />
++    </state>
++    <state x="578" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1613350143316" />
++    <state x="475" y="169" key="refactoring.ChangeSignatureDialog" timestamp="1613251748623">
++      <screen x="0" y="0" width="1536" height="824" />
++    </state>
++    <state x="475" y="169" key="refactoring.ChangeSignatureDialog/0.0.1536.824@0.0.1536.824" timestamp="1613251748623" />
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_2_11_2021_2_24_PM__Default_Changelist_.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/shelf/Uncommitted_changes_before_Update_at_2_11_2021_2_24_PM__Default_Changelist_.xml	(date 1613350298223)
++++ .idea/shelf/Uncommitted_changes_before_Update_at_2_11_2021_2_24_PM__Default_Changelist_.xml	(date 1613350298223)
+@@ -0,0 +1,4 @@
++<changelist name="Uncommitted_changes_before_Update_at_2_11_2021_2_24_PM_[Default_Changelist]" date="1613075091385" recycled="true" deleted="true">
++  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2_11_2021_2_24_PM_[Default_Changelist]/shelved.patch" />
++  <option name="DESCRIPTION" value="Uncommitted changes before Update at 2/11/2021 2:24 PM [Default Changelist]" />
++</changelist>
+\ No newline at end of file
+diff --git out/production/BminsRelics/frostfire/bminsrelics/item/RandomWand.class out/production/BminsRelics/frostfire/bminsrelics/item/RandomWand.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..250551083bcca98a8f7efedfa6e02f897e4a1978
+GIT binary patch
+literal 3710
+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
+WYiLobp`qcw==l#1QAm2}JoJA$Uk%^@
+
+diff --git out/production/BminsRelics/frostfire/bminsrelics/item/ItemManager.class out/production/BminsRelics/frostfire/bminsrelics/item/ItemManager.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..e675fabc6d3f795c896a17105e2323761b3bd386
+GIT binary patch
+literal 1375
+zc$|%s%}x_h6vzLUPCK1puz(anDc{9u5e89FDYDUMOo}GfV9?ccxYP^nj83N{ZjB3H
+z!L1v&pr#}mc>o{6l@H+xJ$G8Zf`KmP+%xx{d(Q8C+@E{jb^%<+f{qTPH5i!C5XWU5
+zCNfgX>X^h8d74o%rD9r#hO`uxiWwDG8Dc&!3#ZC3_9DOLd(~h~_}nU1gj;Q#SR&vR
+z>xtBJWWFF=5iBx9%*--_a@Sks42isO`J-B;$o;2wu}nMNdC#%S%eF7%e{)j_UJ8n2
+zo)+jKi6z^$OWdb$@drEzLo>{o`E`5Kw#v3!vI>DO+)^&n3UbtMI2dikIPUY3s0Q4Z
+zDV&JM&`}6%XJg5J6{e&j!En#adw$6();2aoU<r4VyMgDw2{Q?;Tf@}EzCFY6Ssn>=
+z!6`Rep%=WG@9_IV*0}RX0jFgG20GDY;2aVLW-*}Rnn5FT!@wLyRNORh3%4oaS%eJf
+z(@bo4)vG)sX<#0NH_=*)iTAL`kBjTv38)gQbj^_&A3JXJfJTtNuGwXpqvX+vXk5-^
+zp3|7gC=7$A*N~yT#DkE92R0F#ng3V4LdVv=T~4~EvNMdEEwmLQ^e8*%ky68C3rJH)
+zr;d>9ray~TMr$;?1GY^{8_tuAH8#;h(rD^Q^wO%~0{WVl-;#Bd*6e4r<tKOVL>5y6
+zACa0&&CV<R%2!0PbtoSY>sPkkMcAjmzu6X9N5Tlb;mtVd8it@_lys9&d%`nGkw8B#
+z5-$12B@ED-qVF6cd(c!2GS>Hpd`O<5CeQmO&&)BNu>+oH9Wg?R)uA4t`gMY;lk_g6
+z$)`#BG-ZBBl{}!D!7!Eg1l6FVic>!OC7ud>0!ifu;wzEw&{lS!*U?`1g0}6jH-{yc
+Jax84a_&=TFN!9=W
+
+diff --git out/production/BminsRelics/frostfire/bminsrelics/events/RelicEvents.class out/production/BminsRelics/frostfire/bminsrelics/events/RelicEvents.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..fa2faaf697a9ed98190d3a47ba3e286d92b40e48
+GIT binary patch
+literal 1023
+zc$}3}NpBM|7=6w*$uOlMlqGCkfHFyd;lQm3sVZBgDWDYP?wLBNn~A6LIFb6ZxB%k7
+zu?Kz>;<M93r3%{0lApireVhFI&(B`~UgD{b8t(YGi+euq<AIN5taw=Uu;$?*L+zDR
+z(!6FUhn)dKWh>tk42!W;;^TCZ2>pd88EIN^p7LzKwY2hyvSRjS!O)F|IxoynY7r$9
+zsR}JJnHG_l31y0?Z>6{Hy}=OVsxL?TW{Z?#h8JO+>rs?U$75;c5z%4BkA#jsJJ?o6
+zXr3BJuwiSgI(mk+f25U0Oy)@`UDZ)CJiAmHhJ{_j)A0^JJZZJvpDH6KVjv4iicO_*
+z!;Q=p^}l?U+tGaBYA+L-*!<mms#Eb!TB_!$fjmFpGajIhhKEN19%J3ZlK>$)9=ZW~
+zXflKsoi0&Zx+vpn6n#n#L`sdf&(s#n!U!caL+=tZVem%6Y}0IM@?qz6%Tif~TpvZ&
+z>;^|Yum5K|)^CR^KC)HR-wV^9uk=lL9&hI&OJ6z9hmvllM$WhqSVfh-2(?H5r9?=(
+zpxY-YB4mWs?su@S&U}ULno|aJ?Cl(|fUATJETTzXHh4%_B5ZfRp>&KT3qMefd&j8v
+zNT^uCvLn1n1fW0<*NC8n>vV3DHgL8Q=^A8dxm0bkEfL;u(agHdE4oF<D9l#b{tFOc
+B61)Ha
+
+diff --git out/production/BminsRelics/frostfire/bminsrelics/commands/RelicCommands.class out/production/BminsRelics/frostfire/bminsrelics/commands/RelicCommands.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..368c12bf8afd28a007ddb5906d1f126df194af42
+GIT binary patch
+literal 1915
+zc$}40TUQ%Z6#h<bCnSSF3esS;L+vG$G$YlblG-XrOEjUhsZ>h6oFpe<%4CMlOjz<$
+z^bh#b7uRx8(WOgYeDEi^mM-@>No#Ers4wTTXP>>l@7sGPfBgO9F96<xNMQnV92b*#
+zGfnqPDa_;TB+L}v!MiCepqNGkmpR@W!WCRi<9&R<v6#Xz=8{-a`-e#^tNohtyu@*x
+zV}+x{khpBSc6fy$nwwc?h%I>y$uLs3UAfw6*Q9@2)Eu&8%3fVK>%zCyy=RPtTXw)u
+zC^vmC2%EMqty<f517A9JJ+SItyDi*CVBJ#prQWT`Fyy(t8$&Z!_WYJr>uhh^;o~P(
+z?{ihU4e1vT@hFz>i(O$k!fjdA(6`-Iar1f8%w2}KM#XSy09reg?JiP6m<V)c<$WYN
+z(yrbnCMOPqN%<X7la5mIIe4U`@LQzhu|C)d%#I`W6qu=}Ge|eI!#!(Fe<QEqYAEX4
+z6|tj>L+!%x5kso#b^N-#X6qvUrw|2|%D^O!GaMfjn88?-rZBq@ra3+~P)3Dg)xZs`
+zaojX;3ssKW20p>Mfjjt=;kBp2+3qey^!z=mL<(z=gv`JO?s9AzxQEXeCZDCf*s&d5
+zfR{_>cBSdcUFn-!QuqziYZ4v<pW_RLq*;?q&zA)QUt*0R|9?7>Vf5d$H){7~J*0vU
+zF5>c6vfd#k4CYZSL@r154MSQrSw#kcXi;${a(()iMsjL!AO_x&;i_oU^YPqFzup;r
+z)<!1zpd*~1)N)C<B@qnDO*3=$5T2@<72y(gqLREW!yfVZez9I;<_zLedfY4wIU>}z
+zjk=Bb#8XX=ibIn3_kYrM<azo<B9g44(J1Md^SRBVqV{y}gtlX?h+vCGPz|lv*^#P5
+z7y9Zkpx^0XGW5D8Ok<pW`Dp~`Zy-WDO)9Nfx>>X{+T-URfqkbxPtlstMgy<tRXgAW
+zUZtHz5+}Ql*(6yx*@D^M5cvkfvzh1tViCk1&i;zXLOj2ZcqXwA{xxo9W6_I0Ai0pp
+zCVt1sZ2SO2B=^rqZA7z)?~$$^z=+_^w>XoH|AgU<M|deSvX4>qj<(DgE&IqE;FyXZ
+zeMo7e8fpP)T1N@U7)Fqxb)5K3;B{h~r_&s9tq>89;6EVfiqZ;s=dlcvlu0N8J#y-F
+yie55(I*l_VhdQ0bIm)I^Im{qNQSaeAW{G}Y=Z=m2g(AlVj>7bxT2V_&`Nlsza0fa7
+
+diff --git out/production/BminsRelics/frostfire/bminsrelics/Bminsrelics.class out/production/BminsRelics/frostfire/bminsrelics/Bminsrelics.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..27f53057f8dc2e3c7183599bfb2b14813d31bb97
+GIT binary patch
+literal 1447
+zc$}3~ZBG+H5Pp^xuDu>mswgVTAqb^nuP7i2qEd>A#Sm*q{CI7*$4a|L?ykhY<p&^0
+z;t%jg8RuRsG(d>CWas5(o|&DUncshY{sJ(MEfvF<OyE%xH!+pKv`@1M%&0_j3LdLS
+zU{b{_p7@%43I+-a=2Y}!GKHsj=BwuuSWvNu=Lsw+c%k4WgL1$fSJ;vvQ~qWim`2l-
+zmQnE>A+2SGWP87Edc5UY41Fs?3U8GmmYvyQh!^cTXBaFC$v?GQRqlK-t4;0$*)_Ad
+zV>-f@BW2v%6)wX>x#8HZ*ANajsx2X1hc`vdHP+5}ikh%xNrrw&TdoT?<kgDZc4~Y>
+z_(J-eOWx01!yVjZ=q=<6`8f@@aGL=dMts^E*lAeC3d8K>Db(y%%anE3`0UHYNK)`h
+z!zx~Dc!ReJ)-)8c&XBzvgCB6|MF^#US5VThfp;3-;{(G&$=fxhPRRP2!)4u;)2`0<
+zMNO}4ZR`8Zwk4##Yr1-sbE)&72=%;zO${GWW?1|$|9V)tdY)nY+PagC?N~;&y|*Vk
+zBZM-7me{0YJCNxOEbc|Mp=`1jduFD54kfCo5qd{{^uYRcHVi43d!_HZ*7j_NVLE#m
+zY-Ie;Y}s$iBqdnk4z)GIaJDO(P)*^7E-0y=$S+J`%ao?&t0ubLqmpzP5!l!@CJX}(
+zw}k6)Cu|9ZrLNlqO=FaO3rUDqhU{FgY+C{DDCHN_zwL>p(IhQBfD!(s#73_AN7E=|
+z!}jZQ$@}eKoOZ=9?VTPle~gG@{umLB5l2%-=RJ~&fdw#>I|j>TdJYlGW#WhE{Si2i
+z(m6mbpxqQl5-NT7;m>5?ga;T4p!E)5BM1N#a+$s(D5pq#Jx1~fYVHWB6KD*l=qJ@c
+z?gWD|kT#teIzr|wUWOupmR_17PhpVOVESClLMP^UC+1Rg2{k~w(S@cG1r;Mn<v2r8
+KJ17qW%Za}`C2!~e
+
+diff --git out/production/BminsRelics/frostfire/bminsrelics/item/Relic.class out/production/BminsRelics/frostfire/bminsrelics/item/Relic.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..dc3d6218c5a33a56d149341eccb87de66abb3e89
+GIT binary patch
+literal 674
+zc$}3{$w~u35Ph9(vT0o7a#HaSMQsmyiU=YKLQpZ1d(YU$P9`(b=>+^MJqaHC06$8s
+z?hG3ApkAt~tKO^S_1pW)D}X&L7m>z-heZ!d3>jr)k71<|>o)fX-L5iRMMD{xSU>PH
+zDmIM>x^;%ajnXo(X@;3bM+^lIMbzd^qgB)<K<+?A${aGJYa1=<d>r3MhDt+4@_f+q
+zrM?z^C@nb-MA#Bq*>{r6m^;;HSZmzsxNmN06!&{7>T4OQpwI1={L034yEDyUSg&pT
+z1)V<%j2a3<Lw0N9XG(h|zYoQO)cn%9v&cv-0&`+Zb$dnDp%}LR#bhWp<ADz3sj|lv
+z-7Y&;voi81klw#7&M@^Q@rB<Z<uj{D(bs`2X@D$6Bsx6uX^N;X*&@9-c}70F`3&~t
+z2qm&Pm-J93TOI*0fl1e<f~kbOm5@{H@f))=#!P)Or!kW-_gx-8M@~3mbyQ4<Hk!qp
+J8#eFo)emsFmGl4r
+
+diff --git out/artifacts/BminsRelics_jar/BminsRelics.jar out/artifacts/BminsRelics_jar/BminsRelics.jar
+new file mode 100644
+index 0000000000000000000000000000000000000000..13ec466e3c37af889d4c39b4cd2ae9671d6b811d
+GIT binary patch
+literal 7227
+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
+

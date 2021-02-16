@@ -1,0 +1,16 @@
+Index: src/plugin.yml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>name: Relics\r\nmain: frostfire.relics.Relics\r\nversion: 0.0.1\r\ndescription: A really cool plugin for relics and a few other things probably\r\ncommands:\r\n  relic:\r\n    description: Gives a relic\r\n    usage: /<command>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/plugin.yml	(revision 35608552a59ae02a5f69a5b168f96f8fb40bc823)
++++ src/plugin.yml	(date 1613074894159)
+@@ -1,5 +1,5 @@
+ name: Relics
+-main: frostfire.relics.Relics
++main: frostfire.bminsrelics.Bminsrelics
+ version: 0.0.1
+ description: A really cool plugin for relics and a few other things probably
+ commands:

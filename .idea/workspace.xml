@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="BminsRelics:jar" />
+    </artifacts-to-build>
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:origin/master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="baed5fb0-70b3-401f-adaa-ed7de37e8c39" name="Default Changelist" comment="?">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/BminsRelics_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/spigot_1_16_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2_11_2021_2_24_PM_[Default_Changelist]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2_11_2021_2_24_PM__Default_Changelist_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2_11_2021_3_04_PM_[Default_Changelist]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2_11_2021_3_04_PM__Default_Changelist_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BminsRelics.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/artifacts/BminsRelics_jar/BminsRelics.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/BminsRelics/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/BminsRelics/frostfire/bminsrelics/Bminsrelics.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/BminsRelics/frostfire/bminsrelics/commands/RelicCommands.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/BminsRelics/frostfire/bminsrelics/events/RelicEvents.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/BminsRelics/frostfire/bminsrelics/item/ItemManager.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/BminsRelics/frostfire/bminsrelics/item/RandomWand.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/BminsRelics/frostfire/bminsrelics/item/Relic.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/BminsRelics/plugin.yml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/Ethane03/BminsRelics.git" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1oJghwxTNOg7y2pXiEG9moJmIfX" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/spigot-1.16.5.jar!/" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="frostfire.bminsrelics.item" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\rcili\Desktop\Development\Plugins\BminsRelics\src" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="Application" factoryName="Application">
+      <module name="BminsRelics" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="baed5fb0-70b3-401f-adaa-ed7de37e8c39" name="Default Changelist" comment="" />
+      <created>1613010229362</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1613010229362</updated>
+    </task>
+    <task id="LOCAL-00001" summary="More setup">
+      <created>1613010684894</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1613010684894</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Pogwand">
+      <created>1613011967609</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1613011967609</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Infinidirt?">
+      <created>1613091532328</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1613091532328</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Swrod of godsw?">
+      <created>1613092161668</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1613092161668</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Swrod of godsw? again">
+      <created>1613092192997</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1613092192997</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Fixed the infidirt adventure mode problem, I think, and added a wither skull bow because I cant figure out how to set the shulkerbullet target.">
+      <created>1613239941061</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1613239941061</updated>
+    </task>
+    <task id="LOCAL-00007" summary="stuff. we will re do this">
+      <created>1613252802511</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1613252802511</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Stuff">
+      <created>1613253956881</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1613253956881</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Redid the multiple option Activate.">
+      <created>1613254557641</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1613254557641</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Tab completion">
+      <created>1613255269561</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1613255269561</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Toothpick fixes">
+      <created>1613260083113</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1613260083113</updated>
+    </task>
+    <task id="LOCAL-00012" summary="logs">
+      <created>1613260243125</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1613260243125</updated>
+    </task>
+    <task id="LOCAL-00013" summary="fixed events for both trick sword and bow">
+      <created>1613350358608</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1613350358608</updated>
+    </task>
+    <task id="LOCAL-00014" summary="?">
+      <created>1613350435119</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1613350435119</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="More setup" />
+    <MESSAGE value="Pogwand" />
+    <MESSAGE value="Infinidirt?" />
+    <MESSAGE value="Swrod of godsw?" />
+    <MESSAGE value="Fixed the infidirt adventure mode problem, I think, and added a wither skull bow because I cant figure out how to set the shulkerbullet target." />
+    <MESSAGE value="I might have fixed it?" />
+    <MESSAGE value="stuff. we will re do this" />
+    <MESSAGE value="Stuff" />
+    <MESSAGE value="Redid the multiple option Activate." />
+    <MESSAGE value="Tab completion" />
+    <MESSAGE value="Toothpick fixes" />
+    <MESSAGE value="Swrod of godsw? again" />
+    <MESSAGE value="logs" />
+    <MESSAGE value="fixed events for both trick sword and bow" />
+    <MESSAGE value="?" />
+    <option name="LAST_COMMIT_MESSAGE" value="?" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1613012703263">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1613012703263" />
+    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser" timestamp="1613254923972">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1613254923972" />
+    <state x="498" y="202" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1613012662086">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="498" y="202" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1613012662086" />
+    <state x="551" y="306" width="433" height="217" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1613238138713">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="551" y="306" width="433" height="217" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" timestamp="1613238138713" />
+    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1613238221368">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1613238221368" />
+    <state x="473" y="153" key="FileChooserDialogImpl" timestamp="1613010243896">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="473" y="153" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1613010243896" />
+    <state x="643" y="310" key="Github.ShareDialog" timestamp="1613010299361">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="643" y="310" key="Github.ShareDialog/0.0.1536.824@0.0.1536.824" timestamp="1613010299361" />
+    <state x="514" y="117" key="Github.UntrackedFilesDialog" timestamp="1613010306319">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="514" y="117" key="Github.UntrackedFilesDialog/0.0.1536.824@0.0.1536.824" timestamp="1613010306319" />
+    <state x="147" y="64" key="MergeDialog" timestamp="1613075091370">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="147" y="64" key="MergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1613075091370" />
+    <state x="249" y="0" key="SettingsEditor" timestamp="1613074873365">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1613074873365" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1613350360524">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1613350360524" />
+    <state x="578" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1613350483715">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="578" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1613350483715" />
+    <state x="475" y="169" key="refactoring.ChangeSignatureDialog" timestamp="1613251748623">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="475" y="169" key="refactoring.ChangeSignatureDialog/0.0.1536.824@0.0.1536.824" timestamp="1613251748623" />
+  </component>
+</project>
