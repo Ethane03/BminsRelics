@@ -1,5 +1,8 @@
 package frostfire.bminsrelics.events;
 
+import org.bukkit.Bukkit;
+import org.bukkit.entity.Arrow;
+import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -7,6 +10,7 @@ import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.event.entity.EntityShootBowEvent;
 import org.bukkit.event.entity.ProjectileHitEvent;
+import org.bukkit.event.entity.EntityDamageEvent.DamageCause;
 import org.bukkit.event.player.PlayerInteractEvent;
 
 import frostfire.bminsrelics.item.ItemManager;
@@ -35,6 +39,15 @@ public class RelicEvents implements Listener {
     }
     @EventHandler
     public static void onHit(EntityDamageByEntityEvent event){
+        if(event.getDamager() instanceof Arrow) {
+            Arrow arrow = (Arrow) event.getDamager();
+            if(arrow.getShooter() instanceof Player) {
+                Relic relic = ItemManager.GetRelic(((Player)arrow.getShooter()).getInventory().getItemInMainHand());
+                if(relic!=null) {
+                    relic.Activate(event);
+                }
+            }
+        }
         if(((Player)event.getDamager()).getInventory().getItemInMainHand() != null) {
             Relic relic = ItemManager.GetRelic(((Player)event.getDamager()).getInventory().getItemInMainHand());
             if(relic!=null) {
@@ -47,6 +60,17 @@ public class RelicEvents implements Listener {
         Relic relic = ItemManager.GetRelic(event.getItemInHand());
         if(relic!=null) {
             relic.Activate(event);
+        }
+    }
+    //Doesn't work yet.
+    @EventHandler
+    public static void onShot(ProjectileHitEvent event) {
+        if(event.getEntity().getType() != EntityType.ARROW)return;
+        if(((Player)event.getEntity().getShooter()).getInventory().getItemInMainHand() != null) {
+            Relic relic = ItemManager.GetRelic(((Player)event.getEntity().getShooter()).getInventory().getItemInMainHand());
+            if(relic!=null) {
+                relic.Activate(event);
+            }
         }
     }
 }
