@@ -1,6 +1,6 @@
 name: BminsRelics
 main: frostfire.bminsrelics.Bminsrelics
-version: 0.0.1
+version: 0.0.3
 description: A really cool plugin for relics and a few other things probably
 commands:
   relic:
@@ -12,7 +12,9 @@ commands:
     description: Set a checkpoint
     usage: /<command> [name]
     permission: minecraft.command.gamemode
+    permission-message: You don't look like Bmin.
   send:
     description: Send to a checkpoint
     usage: /<command> [player] [name]
     permission: minecraft.command.gamemode
+    permission-message: You don't look like Bmin.

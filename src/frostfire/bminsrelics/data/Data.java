@@ -3,17 +3,14 @@ package frostfire.bminsrelics.data;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.World;
 import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.configuration.file.YamlConfiguration;
-import org.bukkit.entity.Player;
-import org.bukkit.plugin.Plugin;
-import org.yaml.snakeyaml.Yaml;
-
-import frostfire.bminsrelics.Bminsrelics;
 
 public class Data {
     File folder;
@@ -63,5 +60,15 @@ public class Data {
         } catch (IOException e1) {
             e1.printStackTrace();
         }
+    }
+    public List<String> GetLocations() {
+        List<String> locations = new ArrayList<>();
+        File file = new File(folder, "checkpoints.yml");
+        YamlConfiguration config = YamlConfiguration.loadConfiguration(file);
+        for(String key : config.getKeys(false)){
+            locations.add(key);
+          }
+          
+        return locations;
     }
 }

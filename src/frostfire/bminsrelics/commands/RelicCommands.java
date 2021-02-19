@@ -32,12 +32,16 @@ public class RelicCommands implements CommandExecutor {
             return true;
         }
         else if(cmd.getName().equalsIgnoreCase("checkpoint")) {
-            Bminsrelics.data.AddLocation(args[0], player.getLocation());
+            Bminsrelics.data.AddLocation(args[0].toLowerCase(), player.getLocation());
+            player.sendMessage("Checkpoint Created!");
+            return true;
         }
         else if(cmd.getName().equalsIgnoreCase("send")) {
             if(args[0].equalsIgnoreCase("@a")){
                 for(Player players : Bukkit.getOnlinePlayers()){
-                    SendCommand(players.getName(), args[1]);
+                    if(!player.equals(player)){
+                        SendCommand(players.getName(), args[1]);
+                    }
                 }
                 return true;
             }
@@ -48,25 +52,31 @@ public class RelicCommands implements CommandExecutor {
         return false;
     }
 
-    private boolean SendCommand(String player, String name) {
-        Location end;
-        if(name.equals("back")) {
-            end = Bminsrelics.data.GetLocation("back."+player);
-        }
-        else {
-            end = Bminsrelics.data.GetLocation(name);
-        }
-        Player otherPlayer = Bukkit.getPlayer(player);
-        if(otherPlayer==null) {
-            return false;
-        }
-        else if(end==null) {
+    private boolean SendCommand(String from, String to) {
+        Location end=EitherPlayerOrCheck(to);
+        Player otherPlayer = Bukkit.getPlayer(from);
+        if(otherPlayer==null||end==null) {
             return false;
         }
         otherPlayer.getWorld().spawnParticle(Particle.EXPLOSION_HUGE, otherPlayer.getLocation(), 5);
-        Bminsrelics.data.AddLocation("back."+player, otherPlayer.getLocation());
+        Bminsrelics.data.AddLocation("back."+from, otherPlayer.getLocation());
         end.getWorld().spawnParticle(Particle.EXPLOSION_HUGE, end, 1);
         otherPlayer.teleport(end);
         return true;
+    }
+    private Location EitherPlayerOrCheck(String name) {
+        Player p = Bukkit.getPlayer(name);
+        if(p!=null) {
+            return p.getLocation();
+        }
+        else {
+            Location c = Bminsrelics.data.GetLocation(name.toLowerCase());
+            if(c!=null) {
+                return c;
+            }
+            else {
+                return null;
+            }
+        }
     }
 }

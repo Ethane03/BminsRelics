@@ -1,12 +1,10 @@
 package frostfire.bminsrelics.item.relic;
 
 import frostfire.bminsrelics.item.Relic;
-import org.bukkit.GameMode;
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.*;
-import org.bukkit.event.block.Action;
-import org.bukkit.event.player.PlayerInteractEvent;
+import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
@@ -33,10 +31,8 @@ public class Infinidirt extends Relic {
         return this;
     }
     @Override
-    public void Activate(PlayerInteractEvent event) {
+    public void Activate(BlockPlaceEvent event) {
         Player player = event.getPlayer();
-        if(event.getAction() == Action.RIGHT_CLICK_BLOCK&&player.getGameMode()!=GameMode.ADVENTURE) {
-            player.getInventory().addItem(item);
-        }
+        player.getInventory().addItem(item);
     }
 }

@@ -33,7 +33,7 @@ public class LightningHammer extends Relic {
     public void Activate(PlayerInteractEvent event) {
         Player player = event.getPlayer();
         if(event.getAction() == Action.LEFT_CLICK_AIR) {
-            player.getWorld().strikeLightning(player.getTargetBlock(null, 20).getLocation());
+            player.getWorld().strikeLightning(player.getTargetBlock(null, 100).getLocation());
         }
     }
 }

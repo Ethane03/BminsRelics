@@ -18,7 +18,7 @@ public class HomingBow extends Relic {
 
     @Override
     public Relic init() {
-        directory = "homingbow";
+        directory = "skullbow";
         ItemStack temp = new ItemStack(Material.BOW);
         ItemMeta meta = temp.getItemMeta();
         meta.setDisplayName("§6Skull Bow");
@@ -41,7 +41,6 @@ public class HomingBow extends Relic {
                 WitherSkull s = event.getEntity().getWorld().spawn(arrow.getLocation(), WitherSkull.class);
                 s.setVelocity(arrow.getVelocity());
                 s.setShooter(arrow.getShooter());
-                s.setVelocity(arrow.getVelocity());
                 event.setProjectile(s);
             }
         }
