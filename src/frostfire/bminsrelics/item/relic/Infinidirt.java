@@ -33,6 +33,6 @@ public class Infinidirt extends Relic {
     @Override
     public void Activate(BlockPlaceEvent event) {
         Player player = event.getPlayer();
-        player.getInventory().addItem(item);
+        player.getInventory().setItemInMainHand(item);
     }
 }

@@ -52,8 +52,14 @@ public class RelicCommands implements CommandExecutor {
         return false;
     }
 
-    private boolean SendCommand(String from, String to) {
-        Location end=EitherPlayerOrCheck(to);
+    public static boolean SendCommand(String from, String to) {
+        Location end;
+        if(to.equalsIgnoreCase("back")) {
+            end = Bminsrelics.data.GetLocation("back."+from);
+        }
+        else {
+            end=EitherPlayerOrCheck(to);
+        }
         Player otherPlayer = Bukkit.getPlayer(from);
         if(otherPlayer==null||end==null) {
             return false;
@@ -64,7 +70,7 @@ public class RelicCommands implements CommandExecutor {
         otherPlayer.teleport(end);
         return true;
     }
-    private Location EitherPlayerOrCheck(String name) {
+    private static Location EitherPlayerOrCheck(String name) {
         Player p = Bukkit.getPlayer(name);
         if(p!=null) {
             return p.getLocation();
