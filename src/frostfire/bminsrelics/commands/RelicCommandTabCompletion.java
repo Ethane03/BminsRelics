@@ -27,11 +27,14 @@ public class RelicCommandTabCompletion implements TabCompleter {
         }
         else if(command.getName().equalsIgnoreCase("send")) {
             if(strings.length == 2) {
-                List<String> list = Bminsrelics.data.GetLocations();
-                for(Player players : Bukkit.getOnlinePlayers()){
-                    list.add(players.getName());
-                }
+                List<String> list = Bminsrelics.data.GetLocations(strings[1]);
                 return list;
+            }
+            else if(strings.length == 3) {
+                List<String> bools = new ArrayList<>();
+                bools.add("true");
+                bools.add("false");
+                return bools;
             }
         }
         return null;

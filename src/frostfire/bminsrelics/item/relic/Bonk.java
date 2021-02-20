@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
+import org.bukkit.Particle;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
@@ -37,7 +38,7 @@ public class Bonk extends Relic {
         if(event.getEntity() instanceof Player) {
             Player victim = (Player) event.getEntity();
             Bukkit.getServer().broadcastMessage(victim.getName()+" has been sent to horny jail.");
-            RelicCommands.SendCommand(victim.getName(),"horny");
+            RelicCommands.SendCommand(victim.getName(),"horny",Particle.HEART);
         }
     }
 }

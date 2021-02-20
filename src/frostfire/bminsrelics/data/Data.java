@@ -9,6 +9,7 @@ import java.util.List;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.World;
+import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.configuration.file.YamlConfiguration;
 
@@ -61,11 +62,16 @@ public class Data {
             e1.printStackTrace();
         }
     }
-    public List<String> GetLocations() {
+    public List<String> GetLocations(String soFar) {
         List<String> locations = new ArrayList<>();
         File file = new File(folder, "checkpoints.yml");
         YamlConfiguration config = YamlConfiguration.loadConfiguration(file);
-        for(String key : config.getKeys(false)){
+        ConfigurationSection sect = config.getRoot();
+        String[] things = soFar.split(".");
+        for(int i=0;i<things.length-1;i++) {
+            sect = sect.getConfigurationSection(things[i]);
+        }
+        for(String key : sect.getKeys(false)){
             locations.add(key);
           }
           
