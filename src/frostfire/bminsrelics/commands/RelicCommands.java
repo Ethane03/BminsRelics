@@ -14,7 +14,6 @@ import org.bukkit.entity.Player;
 import frostfire.bminsrelics.Bminsrelics;
 import frostfire.bminsrelics.item.ItemManager;
 import frostfire.bminsrelics.item.Relic;
-import net.minecraft.server.v1_16_R3.ParticleType;
 
 public class RelicCommands implements CommandExecutor {
 
@@ -36,8 +35,14 @@ public class RelicCommands implements CommandExecutor {
             return true;
         }
         else if(cmd.getName().equalsIgnoreCase("checkpoint")) {
-            Bminsrelics.data.AddLocation(args[0].toLowerCase(), player.getLocation());
-            player.sendMessage("Checkpoint Created!");
+            if(args.length<=1||args[1].equalsIgnoreCase("new")) {
+                Bminsrelics.data.AddLocation(args[0].toLowerCase(), player.getLocation());
+                player.sendMessage("Checkpoint Created!");
+            }
+            else {
+                Bminsrelics.data.DeleteLoc(args[0].toLowerCase());
+                player.sendMessage("Checkpoint Deleted!");
+            }
             return true;
         }
         else if(cmd.getName().equalsIgnoreCase("send")) {

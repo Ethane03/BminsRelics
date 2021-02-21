@@ -77,4 +77,14 @@ public class Data {
           
         return locations;
     }
+    public void DeleteLoc(String loc) {
+        File file = new File(folder, "checkpoints.yml");
+        YamlConfiguration config = YamlConfiguration.loadConfiguration(file);
+        config.set(loc, null);
+        try {
+            config.save(file);
+        } catch (IOException e1) {
+            e1.printStackTrace();
+        }
+    }
 }
