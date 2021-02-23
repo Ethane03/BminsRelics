@@ -40,6 +40,7 @@ public class HomingBow extends Relic {
             if ((event.getEntity() instanceof Player)) {
                 WitherSkull s = event.getEntity().getWorld().spawn(arrow.getLocation(), WitherSkull.class);
                 s.setVelocity(arrow.getVelocity());
+                s.setCharged(true);
                 s.setShooter(arrow.getShooter());
                 event.setProjectile(s);
             }
