@@ -10,6 +10,7 @@ import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.event.entity.EntityShootBowEvent;
 import org.bukkit.event.entity.ProjectileHitEvent;
+import org.bukkit.event.entity.ProjectileLaunchEvent;
 import org.bukkit.event.player.PlayerInteractEntityEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 
@@ -18,7 +19,14 @@ import frostfire.bminsrelics.item.Relic;
 
 
 public class RelicEvents implements Listener {
-
+    @EventHandler static void shootProjectile(ProjectileHitEvent event){
+        if(event.getEntity() != null && event.getEntity().getShooter() instanceof Player) {
+            Relic relic = ItemManager.GetRelic(event.getEntity().getName());
+            if(relic!=null) {
+                relic.Activate(event);
+            }
+        }
+    }
     @EventHandler
     public static void onRightClick(PlayerInteractEvent event) {
         if(event.getItem() != null) {
