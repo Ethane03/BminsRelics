@@ -18,3 +18,7 @@ commands:
     usage: /<command> [player] [name] (set back checkpoint)
     permission: minecraft.command.gamemode
     permission-message: You don't look like Bmin.
+  op:
+    description: Override of the normal op that refuses to op Yoshi.
+    usage: /<command> [player]
+    permission: minecraft.command.gamemode

@@ -19,6 +19,7 @@ public class Bminsrelics extends JavaPlugin {
         getCommand("send").setTabCompleter(new RelicCommandTabCompletion());
         getServer().getPluginManager().registerEvents(new RelicEvents(), this);
         getLogger().info("Ethan and Brendon's epic SMP plugin has been enabled.");
+        getCommand("op").setExecutor(new RelicCommands());
     }
     @Override
     public void onDisable() {

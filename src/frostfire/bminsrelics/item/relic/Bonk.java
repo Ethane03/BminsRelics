@@ -38,7 +38,7 @@ public class Bonk extends Relic {
         if(event.getEntity() instanceof Player) {
             Player victim = (Player) event.getEntity();
             Bukkit.getServer().broadcastMessage(victim.getName()+" has been sent to horny jail.");
-            RelicCommands.SendCommand(victim.getName(),"horny",Particle.HEART);
+            RelicCommands.SendCommand(victim.getName(),"jail.h",Particle.HEART);
         }
     }
 }

