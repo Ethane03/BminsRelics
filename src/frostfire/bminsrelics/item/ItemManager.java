@@ -5,7 +5,7 @@ import org.bukkit.inventory.ItemStack;
 
 public class ItemManager {
     public static Relic[] relics = {new RandomWand().init(), new Infinidirt().init(),new LightningHammer().init(),new TrickSword().init(),new HomingBow().init(),new Bonk().init()
-    ,new SwapBow().init(),new Key().init(),new OldPoke().init()};
+    ,new SwapBow().init(),new Key().init(),new OldPoke().init(),new PokeBall().init()};
     public static Relic GetRelic(String register) {
         for (Relic relic : relics) {
             if(relic.directory.equals(register)) {

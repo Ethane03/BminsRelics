@@ -20,7 +20,7 @@ import frostfire.bminsrelics.item.Relic;
 public class OldPoke extends Relic {
     @Override
     public Relic init() {
-        directory = "poke";
+        directory = "oldpoke";
         ItemStack temp = new ItemStack(Material.HEART_OF_THE_SEA);
         ItemMeta meta = temp.getItemMeta();
         meta.setDisplayName("§6Poke Ball");
