@@ -3,12 +3,19 @@ package frostfire.bminsrelics.item.relic;
 import java.util.ArrayList;
 import java.util.List;
 
+import net.minecraft.server.v1_16_R3.NBTTagCompound;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.Particle;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.EntityType;
+import org.bukkit.entity.LivingEntity;
+import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
 import org.bukkit.event.block.Action;
+import org.bukkit.event.entity.EntityDamageByEntityEvent;
+import org.bukkit.event.entity.ProjectileHitEvent;
+import org.bukkit.event.entity.ProjectileLaunchEvent;
 import org.bukkit.event.player.PlayerInteractEntityEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemFlag;
@@ -18,10 +25,11 @@ import org.bukkit.inventory.meta.ItemMeta;
 import frostfire.bminsrelics.item.Relic;
 
 public class PokeBall extends Relic {
+    public Player shooter;
     @Override
     public Relic init() {
         directory = "poke";
-        ItemStack temp = new ItemStack(Material.HEART_OF_THE_SEA);
+        ItemStack temp = new ItemStack(Material.SNOWBALL);
         ItemMeta meta = temp.getItemMeta();
         meta.setDisplayName("§6Poke Ball");
         List<String> lore = new ArrayList<>();
@@ -35,20 +43,30 @@ public class PokeBall extends Relic {
         return this;
     }
     @Override
-    public void Activate(PlayerInteractEntityEvent event) {
-        ItemStack i = event.getPlayer().getInventory().getItemInMainHand();
-        List<String> lore = i.getItemMeta().getLore();
-        EntityType type = event.getRightClicked().getType();
-        if(type==EntityType.PLAYER)return;
-        String e = type.toString();
-        if(lore.size()!=2)return;
-        ItemMeta meta = i.getItemMeta();
-        lore.add(e);
-        meta.setLore(lore);
-        i.setItemMeta(meta);
-        event.getPlayer().spawnParticle(Particle.PORTAL, event.getRightClicked().getLocation(), 100);
-        event.getRightClicked().remove();
-        event.getPlayer().sendMessage(e+" has been caught!");
+    public void Activate(ProjectileHitEvent event) {
+        if(event.getHitEntity() != null) {
+            ItemStack i = item;
+            List<String> lore = i.getItemMeta().getLore();
+            EntityType type = event.getHitEntity().getType();
+            if (type == EntityType.PLAYER) return;
+            String e = type.toString();
+            if (lore.size() == 2) {
+                lore.add(e);
+            } else {
+                return;
+            }
+            ItemMeta meta = i.getItemMeta();
+            meta.setLore(lore);
+            i.setItemMeta(meta);
+            Player pl = (Player) event.getEntity().getShooter();
+            pl.spawnParticle(Particle.PORTAL, event.getHitEntity().getLocation(), 100);
+            event.getHitEntity().remove();
+            event.getHitEntity().getWorld().dropItem(event.getHitEntity().getLocation(),i);
+        }
+        else if (event.getHitBlock() != null){
+            ItemStack i = item;
+            event.getHitEntity().getWorld().dropItem(event.getHitEntity().getLocation(),i);
+        }
     }
     @Override
     public void Activate(PlayerInteractEvent event) {

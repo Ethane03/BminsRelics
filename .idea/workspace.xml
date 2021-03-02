@@ -32,28 +32,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="baed5fb0-70b3-401f-adaa-ed7de37e8c39" name="Default Changelist" comment="?">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/BminsRelics_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/spigot_1_16_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2_11_2021_2_24_PM_[Default_Changelist]/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2_11_2021_2_24_PM__Default_Changelist_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2_11_2021_3_04_PM_[Default_Changelist]/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2_11_2021_3_04_PM__Default_Changelist_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BminsRelics.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/artifacts/BminsRelics_jar/BminsRelics.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/BminsRelics/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/BminsRelics/frostfire/bminsrelics/Bminsrelics.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/BminsRelics/frostfire/bminsrelics/commands/RelicCommands.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/BminsRelics/frostfire/bminsrelics/events/RelicEvents.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/BminsRelics/frostfire/bminsrelics/item/ItemManager.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/BminsRelics/frostfire/bminsrelics/item/RandomWand.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/BminsRelics/frostfire/bminsrelics/item/Relic.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/BminsRelics/plugin.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2_11_2021_2_24_PM_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2_11_2021_2_24_PM__Default_Changelist_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2_11_2021_3_04_PM_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2_11_2021_3_04_PM__Default_Changelist_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/frostfire/bminsrelics/events/RelicEvents.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/frostfire/bminsrelics/events/RelicEvents.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/frostfire/bminsrelics/item/relic/HomingBow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/frostfire/bminsrelics/item/relic/HomingBow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/frostfire/bminsrelics/item/relic/PokeBall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/frostfire/bminsrelics/item/relic/PokeBall.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,8 +71,8 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/spigot-1.16.5.jar!/" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../MODS/Aether" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
@@ -215,7 +201,21 @@
       <option name="project" value="LOCAL" />
       <updated>1613350435119</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="merge?">
+      <created>1613433780249</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1613433780249</updated>
+    </task>
+    <task id="LOCAL-00016" summary="?">
+      <created>1614049927811</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1614049927811</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -257,10 +257,15 @@
     <MESSAGE value="Swrod of godsw? again" />
     <MESSAGE value="logs" />
     <MESSAGE value="fixed events for both trick sword and bow" />
+    <MESSAGE value="merge?" />
     <MESSAGE value="?" />
     <option name="LAST_COMMIT_MESSAGE" value="?" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="249" y="0" key="#Project_Structure" timestamp="1613747435082">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="249" y="0" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1613747435082" />
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1613012703263">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -277,14 +282,18 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="551" y="306" width="433" height="217" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" timestamp="1613238138713" />
+    <state x="515" y="0" key="CommitChangelistDialog2" timestamp="1614049886639">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="515" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1614049886639" />
     <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1613238221368">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="93" y="93" width="1350" height="638" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1613238221368" />
-    <state x="473" y="153" key="FileChooserDialogImpl" timestamp="1613010243896">
+    <state x="473" y="153" key="FileChooserDialogImpl" timestamp="1613485631623">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="473" y="153" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1613010243896" />
+    <state x="473" y="153" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1613485631623" />
     <state x="643" y="310" key="Github.ShareDialog" timestamp="1613010299361">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -301,14 +310,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1613074873365" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1613350360524">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1614049930681">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1613350360524" />
-    <state x="578" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1613350483715">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1614049930681" />
+    <state x="578" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1614629680311">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="578" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1613350483715" />
+    <state x="578" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1614629680311" />
     <state x="475" y="169" key="refactoring.ChangeSignatureDialog" timestamp="1613251748623">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
