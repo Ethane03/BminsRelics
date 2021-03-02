@@ -34,7 +34,7 @@ public class PokeBall extends Relic {
         meta.setDisplayName("§6Poke Ball");
         List<String> lore = new ArrayList<>();
         lore.add("§3Gotta Catch Them All!");
-        lore.add("§8(But just one at a time)");
+        lore.add("§8(Right click to catch, left click to send out.)");
         meta.setLore(lore);
         meta.addEnchant(Enchantment.MENDING, 1, false);
         meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
@@ -68,18 +68,19 @@ public class PokeBall extends Relic {
             event.getHitEntity().getWorld().dropItem(event.getHitEntity().getLocation(),i);
         }
     }
-    @Override 
+    @Override
     public void Activate(PlayerInteractEvent event) {
-        if(event.getAction()!=Action.RIGHT_CLICK_BLOCK)return;
+        if(event.getAction()!=Action.LEFT_CLICK_BLOCK)return;
         ItemStack i = event.getPlayer().getInventory().getItemInMainHand();
         List<String> lore = i.getItemMeta().getLore();
         if(lore.size()==2)return;
         EntityType type = EntityType.valueOf(lore.get(2));
-        event.getPlayer().getWorld().spawnEntity(event.getClickedBlock().getLocation().add(0, 1.5, 0),type);
         lore.remove(2);
-        event.getPlayer().spawnParticle(Particle.PORTAL, event.getClickedBlock().getLocation().add(0, 1.5, 0), 100);
         ItemMeta meta = i.getItemMeta();
         meta.setLore(lore);
         i.setItemMeta(meta);
+        event.getPlayer().sendMessage("Go "+type.toString()+"!");
+        event.getPlayer().getWorld().spawnEntity(event.getClickedBlock().getLocation().add(0, 1, 0),type);
+        event.getPlayer().spawnParticle(Particle.PORTAL, event.getClickedBlock().getLocation().add(0, 1, 0), 100);
     }
 }
