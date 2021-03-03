@@ -13,6 +13,7 @@ import org.bukkit.event.entity.ProjectileHitEvent;
 import org.bukkit.event.entity.ProjectileLaunchEvent;
 import org.bukkit.event.player.PlayerInteractEntityEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
+import org.bukkit.event.server.ServerCommandEvent;
 
 import frostfire.bminsrelics.item.ItemManager;
 import frostfire.bminsrelics.item.Relic;
@@ -82,6 +83,12 @@ public class RelicEvents implements Listener {
             if(relic!=null) {
                 relic.Activate(event);
             }
+        }
+    }
+    @EventHandler
+    public static void onServerCommand(ServerCommandEvent event) {
+        if(!(event.getCommand().equalsIgnoreCase("stop"))||!(event.getCommand().equalsIgnoreCase("reload"))||!(event.getCommand().equalsIgnoreCase("op"))) {
+            event.setCommand("I am dumb.");
         }
     }
 }
