@@ -9,6 +9,9 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class Bminsrelics extends JavaPlugin {
     public static Data data;
+    public Bminsrelics Bminsrelics(){
+        return this;
+    }
     @Override
     public void onEnable() {
         data = new Data(getDataFolder());

@@ -87,4 +87,31 @@ public class Data {
             e1.printStackTrace();
         }
     }
+    //Glow game info
+    public void AddGameStatus(String name, String playerName, boolean playing) {
+        File file = new File(folder, name + ".yml");
+        YamlConfiguration config = YamlConfiguration.loadConfiguration(file);
+        config.set(playerName+".in",playing);
+        try {
+            config.save(file);
+        } catch (IOException e1) {
+            e1.printStackTrace();
+        }
+    }
+    public boolean GetGameStatus(String name, String playerName) {
+        File file = new File(folder, name + ".yml");
+        YamlConfiguration config = new YamlConfiguration();
+        boolean status;
+        try {
+            config.load(file);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (InvalidConfigurationException e) {
+            e.printStackTrace();
+        }
+        status=config.getBoolean(playerName+".in");
+        return status;
+    }
 }
