@@ -23,9 +23,12 @@ import java.util.logging.Logger;
 public class RelicEvents implements Listener {
     @EventHandler
     static void shootProjectile(ProjectileHitEvent event){
+        Bukkit.broadcastMessage("projectile has been shoot");
         if(event.getEntity().getShooter() instanceof Player) {
+            Bukkit.broadcastMessage("Shooter was a player");
             Relic relic = ItemManager.GetRelic(event.getEntity().getName());
             if(relic!=null) {
+                Bukkit.broadcastMessage("Projectile was a relic");
                 relic.Activate(event);
             }
         }
@@ -93,5 +96,4 @@ public class RelicEvents implements Listener {
             }
         }
     }
-    //Minigame related stuff
 }

@@ -39,7 +39,7 @@ public class OldPoke extends Relic {
         ItemStack i = event.getPlayer().getInventory().getItemInMainHand();
         List<String> lore = i.getItemMeta().getLore();
         EntityType type = event.getRightClicked().getType();
-        if(type==EntityType.PLAYER)return;
+        if(type==EntityType.PLAYER&&type==EntityType.ITEM_FRAME)return;
         String e = type.toString();
         if(lore.size()!=2)return;
         ItemMeta meta = i.getItemMeta();
@@ -62,7 +62,7 @@ public class OldPoke extends Relic {
         meta.setLore(lore);
         i.setItemMeta(meta);
         event.getPlayer().sendMessage("Go "+type.toString()+"!");
-        event.getPlayer().getWorld().spawnEntity(event.getClickedBlock().getLocation().add(event.getBlockFace().getDirection()),type);
-        event.getPlayer().spawnParticle(Particle.PORTAL, event.getClickedBlock().getLocation().add(event.getBlockFace().getDirection()), 100);
+        event.getPlayer().getWorld().spawnEntity(event.getClickedBlock().getLocation().add(event.getBlockFace().getDirection().multiply(2)),type);
+        event.getPlayer().spawnParticle(Particle.PORTAL, event.getClickedBlock().getLocation().add(event.getBlockFace().getDirection().multiply(2)), 100);
     }
 }
