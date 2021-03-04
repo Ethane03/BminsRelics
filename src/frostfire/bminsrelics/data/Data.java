@@ -174,6 +174,11 @@ public class Data {
         }
         else {
             config.set(game, null);
+            File f = new File(folder,  game+".yml");
+            YamlConfiguration con = new YamlConfiguration();
+            for (String s : con.getKeys(false)) {
+                con.set(s, null);
+            }
         }
         try {
             config.save(file);

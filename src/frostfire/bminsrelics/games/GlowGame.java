@@ -1,5 +1,7 @@
 package frostfire.bminsrelics.games;
 import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.entity.PlayerDeathEvent;
 
 public class GlowGame extends Game{
     public GlowGame() {
@@ -19,6 +21,17 @@ public class GlowGame extends Game{
     void Update(){
         for(Player p : OnlinePlayers()) {
             p.setGlowing(true);
+        }
+    }
+    @EventHandler
+    void onGameDeath(PlayerDeathEvent event){
+        if(event.getEntity().getKiller() != null) {
+            if (players.contains(event.getEntity()) && players.contains(event.getEntity().getKiller())) {
+                players.remove(event.getEntity());
+                event.getEntity().setGlowing(false);
+                event.getEntity().sendMessage("You are out of the glow game. Better luck next time!");
+                event.getEntity().getKiller().sendMessage("One more down");
+            }
         }
     }
 }
