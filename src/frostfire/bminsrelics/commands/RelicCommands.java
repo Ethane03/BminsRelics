@@ -29,7 +29,7 @@ public class RelicCommands implements CommandExecutor {
                 }
                 else if(args[0].equalsIgnoreCase("end") && GameDirectory.getActive(args[1])){
                     GameDirectory.EndGame(GameDirectory.getGame(args[1]));
-                    sender.sendMessage(args[1] + " was ended. GG!");
+                    sender.sendMessage(args[1] + " was ended. GG y'all!");
                     return true;
                 }
             }
