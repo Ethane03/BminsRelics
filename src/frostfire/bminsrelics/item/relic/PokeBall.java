@@ -43,6 +43,10 @@ public class PokeBall extends Relic {
         return this;
     }
     @Override
+    public void Activate(ProjectileLaunchEvent event){
+        event.getEntity().setCustomName("poke");
+    }
+    @Override
     public void Activate(ProjectileHitEvent event) {
         if(event.getHitEntity() != null) {
             ItemStack i = item;

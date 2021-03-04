@@ -4,6 +4,7 @@ import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 import org.bukkit.event.entity.EntityShootBowEvent;
 import org.bukkit.event.entity.ProjectileHitEvent;
+import org.bukkit.event.entity.ProjectileLaunchEvent;
 import org.bukkit.event.player.PlayerInteractEntityEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
@@ -20,5 +21,6 @@ public abstract class Relic{
     public void Activate(EntityDamageByEntityEvent event){};
     public void Activate(BlockPlaceEvent event){};
     public void Activate(ProjectileHitEvent event){};
+    public void Activate(ProjectileLaunchEvent event){};
     public void Activate(PlayerInteractEntityEvent event){};
 }

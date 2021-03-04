@@ -22,13 +22,19 @@ import java.util.logging.Logger;
 
 public class RelicEvents implements Listener {
     @EventHandler
-    static void shootProjectile(ProjectileHitEvent event){
-        Bukkit.broadcastMessage("projectile has been shoot");
+    static void ProjectileHit(ProjectileHitEvent event){
         if(event.getEntity().getShooter() instanceof Player) {
-            Bukkit.broadcastMessage("Shooter was a player");
+            Relic relic = ItemManager.GetRelic(event.getEntity().getCustomName());
+            if(relic!=null) {
+                relic.Activate(event);
+            }
+        }
+    }
+    @EventHandler
+    static void ProjectileShoot(ProjectileLaunchEvent event){
+        if(event.getEntity().getShooter() instanceof Player) {
             Relic relic = ItemManager.GetRelic(event.getEntity().getName());
             if(relic!=null) {
-                Bukkit.broadcastMessage("Projectile was a relic");
                 relic.Activate(event);
             }
         }
