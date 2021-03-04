@@ -39,7 +39,7 @@ public class OldPoke extends Relic {
         ItemStack i = event.getPlayer().getInventory().getItemInMainHand();
         List<String> lore = i.getItemMeta().getLore();
         EntityType type = event.getRightClicked().getType();
-        if(type==EntityType.PLAYER&&type==EntityType.ITEM_FRAME)return;
+        if(type==EntityType.PLAYER||type==EntityType.ITEM_FRAME)return;
         String e = type.toString();
         if(lore.size()!=2)return;
         ItemMeta meta = i.getItemMeta();

@@ -1,6 +1,5 @@
 package frostfire.bminsrelics.events;
 
-import frostfire.bminsrelics.games.GameDirectory;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Arrow;
 import org.bukkit.entity.EntityType;
@@ -8,7 +7,10 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockPlaceEvent;
-import org.bukkit.event.entity.*;
+import org.bukkit.event.entity.EntityDamageByEntityEvent;
+import org.bukkit.event.entity.EntityShootBowEvent;
+import org.bukkit.event.entity.ProjectileHitEvent;
+import org.bukkit.event.entity.ProjectileLaunchEvent;
 import org.bukkit.event.player.PlayerInteractEntityEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 
@@ -92,13 +94,6 @@ public class RelicEvents implements Listener {
             if(relic!=null) {
                 relic.Activate(event);
             }
-        }
-    }
-
-    //Game stuff
-    public static void onPlayerDie(PlayerDeathEvent event){
-        if(event.getEntity().getKiller() instanceof Player){
-            //GameDirectory.activeGames
         }
     }
 }
