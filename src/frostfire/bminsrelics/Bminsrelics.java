@@ -17,6 +17,8 @@ public class Bminsrelics extends JavaPlugin {
         games = new GameDirectory();
         getCommand("relic").setExecutor(new RelicCommands());
         getCommand("relic").setTabCompleter(new RelicCommandTabCompletion());
+        getCommand("minigame").setExecutor(new RelicCommands());
+        getCommand("minigame").setTabCompleter(new RelicCommandTabCompletion());
         getCommand("checkpoint").setExecutor(new RelicCommands());
         getCommand("send").setExecutor(new RelicCommands());
         getCommand("send").setTabCompleter(new RelicCommandTabCompletion());

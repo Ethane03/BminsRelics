@@ -35,6 +35,7 @@ public class GlowGame extends Game{
                     event.getEntity().getKiller().sendMessage("You won yay!");
                     for (int i =0;i<100;i++) {
                         event.getEntity().getKiller().getWorld().spawn(event.getEntity().getKiller().getLocation(), ExperienceOrb.class);
+                        End();
                     }
                 }
                 else{

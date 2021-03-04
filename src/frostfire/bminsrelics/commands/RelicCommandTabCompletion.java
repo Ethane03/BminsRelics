@@ -38,13 +38,13 @@ public class RelicCommandTabCompletion implements TabCompleter {
             }
         }
         else if(command.getName().equalsIgnoreCase("minigame")) {
-            if(strings.length == 2) {
+            if(strings.length == 1) {
                 List<String> list = new ArrayList<>();
                 list.add("start");
                 list.add("end");
                 return list;
             }
-            else if(strings.length == 3) {
+            else if(strings.length == 2) {
                 List<String> names = new ArrayList<>();
                 for(Game g : GameDirectory.allGames){
                     names.add(g.name);

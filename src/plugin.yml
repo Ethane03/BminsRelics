@@ -22,3 +22,8 @@ commands:
     description: Override of the normal op that refuses to op Yoshi.
     usage: /<command> [player]
     permission: minecraft.command.gamemode
+  minigame:
+    description: Play minigames!
+    usage: /<command> [do] [game]
+    permission: minecraft.command.gamemode
+    

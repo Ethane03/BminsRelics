@@ -19,23 +19,6 @@ public class RelicCommands implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-        if(cmd.getName().equalsIgnoreCase("minigame")) {
-            if(GameDirectory.getExists(args[1])){
-                if(args[0].equalsIgnoreCase("start") && !GameDirectory.getActive(args[1])) {
-                    GameDirectory.StartGame(GameDirectory.getGame(args[1]));
-                    Bukkit.broadcastMessage(args[1] + " was started.");
-                    return true;
-                }
-                else if(args[0].equalsIgnoreCase("end") && GameDirectory.getActive(args[1])){
-                    GameDirectory.EndGame(GameDirectory.getGame(args[1]));
-                    sender.sendMessage(args[1] + " was ended. GG y'all!");
-                    return true;
-                }
-            }
-            else{
-                sender.sendMessage("This game doesn't exist. Use autocorrect dummy.");
-            }
-        }
         if(cmd.getName().equalsIgnoreCase("op")) {
             if(!args[0].equalsIgnoreCase("Yoshiisaninja")) {
                 Bukkit.getPlayer(args[0]).setOp(true);
@@ -94,6 +77,28 @@ public class RelicCommands implements CommandExecutor {
                     player.sendMessage("No back created.");
                 }
                 return SendCommand(args[0], args[1],randomParticle());
+            }
+        }
+        else if(cmd.getName().equalsIgnoreCase("minigame")) {
+            if(GameDirectory.getExists(args[1])){
+                if(args[0].equalsIgnoreCase("start") && !GameDirectory.getActive(args[1])) {
+                    GameDirectory.StartGame(GameDirectory.getGame(args[1]));
+                    Bukkit.broadcastMessage(args[1] + " was started.");
+                    return true;
+                }
+                else if(args[0].equalsIgnoreCase("end") && GameDirectory.getActive(args[1])){
+                    GameDirectory.EndGame(GameDirectory.getGame(args[1]));
+                    player.sendMessage(args[1] + " was ended. GG y'all!");
+                    return true;
+                }
+                else {
+                    player.sendMessage("What's "+args[0]);
+                    return true;
+                }
+            }
+            else{
+                player.sendMessage("This game doesn't exist. Use autocorrect dummy.");
+                return true;
             }
         }
         return false;
