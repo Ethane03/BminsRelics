@@ -1,6 +1,5 @@
 package frostfire.bminsrelics.events;
 
-import org.bukkit.Bukkit;
 import org.bukkit.entity.Arrow;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
@@ -16,8 +15,6 @@ import org.bukkit.event.player.PlayerInteractEvent;
 
 import frostfire.bminsrelics.item.ItemManager;
 import frostfire.bminsrelics.item.Relic;
-
-import java.util.logging.Logger;
 
 
 public class RelicEvents implements Listener {

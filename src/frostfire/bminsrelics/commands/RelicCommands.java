@@ -14,7 +14,6 @@ import org.bukkit.entity.Player;
 import frostfire.bminsrelics.Bminsrelics;
 import frostfire.bminsrelics.item.ItemManager;
 import frostfire.bminsrelics.item.Relic;
-import org.bukkit.event.block.BlockIgniteEvent;
 
 public class RelicCommands implements CommandExecutor {
 

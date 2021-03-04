@@ -13,7 +13,6 @@ import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
-import frostfire.bminsrelics.Bminsrelics;
 import frostfire.bminsrelics.commands.RelicCommands;
 import frostfire.bminsrelics.item.Relic;
 
