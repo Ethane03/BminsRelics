@@ -21,7 +21,6 @@ import static org.bukkit.Bukkit.getServer;
 public abstract class Game implements Listener{
     public int life;
     public String name;
-    boolean running = false;
     boolean run_forever = false;
     Bminsrelics plugin;
     List<OfflinePlayer> players;
@@ -57,7 +56,6 @@ public abstract class Game implements Listener{
         return players;
     }
     public void Init(long frequency, long delay){
-        running = true;
         getServer().getPluginManager().registerEvents(this, plugin);
         BukkitScheduler scheduler = getServer().getScheduler();
         for(Player p : Bukkit.getOnlinePlayers()) {
@@ -72,12 +70,12 @@ public abstract class Game implements Listener{
         UpdatePlayerList();
         onStart();
     }
+    public void OnReload() {}
     void onStart(){}
     void onJoin(Player p) {}
     void onLeave(Player p) {}
     public void End(){
         HandlerList.unregisterAll(this);
-        running = false;
         GameDirectory.activeGames.remove(this);
     }
     @EventHandler
@@ -93,9 +91,29 @@ public abstract class Game implements Listener{
     public void AddPlayer(Player p) {
         Bminsrelics.data.SetPlayerParticipation(name, p, true);
         onJoin(p);
+        UpdatePlayerList();
     }
     public void EjectPlayer(Player p) {
         Bminsrelics.data.SetPlayerParticipation(name, p, false);
         onLeave(p);
+        UpdatePlayerList();
+    }
+    public Double GetDouble(String v,Double def) {
+        return (Double)Bminsrelics.data.GetGameVariable(name, v, def);
+    }
+    public Double GetDouble(String v) {
+        return GetDouble(v, 0.0);
+    }
+    public String GetString(String v,String def) {
+        return (String)Bminsrelics.data.GetGameVariable(name, v, def);
+    }
+    public String GetString(String v) {
+        return GetString(v, "");
+    }
+    public void Set(String v, Object i) {
+        Bminsrelics.data.SetGameVariable(name, v, i);
+    }
+    public void Get(String v, Object i) {
+        Bminsrelics.data.GetGameVariable(name, v, i);
     }
 }

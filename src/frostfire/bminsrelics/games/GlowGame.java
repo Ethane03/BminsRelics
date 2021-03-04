@@ -1,5 +1,6 @@
 package frostfire.bminsrelics.games;
 import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
 
 public class GlowGame extends Game{
     public GlowGame() {

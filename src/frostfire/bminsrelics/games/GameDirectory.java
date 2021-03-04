@@ -13,6 +13,7 @@ public class GameDirectory {
         }
         for(Game g : activeGames) {
             g.UpdatePlayerList();
+            g.OnReload();
         }
     }
     
