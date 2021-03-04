@@ -27,7 +27,7 @@ public class GlowGame extends Game{
     void onGameDeath(PlayerDeathEvent event){
         if(event.getEntity().getKiller() != null) {
             if (players.contains(event.getEntity()) && players.contains(event.getEntity().getKiller())) {
-                players.remove(event.getEntity());
+                EjectPlayer(event.getEntity());
                 event.getEntity().setGlowing(false);
                 event.getEntity().sendMessage("You are out of the glow game. Better luck next time!");
                 event.getEntity().getKiller().sendMessage("One more down");
