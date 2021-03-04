@@ -80,20 +80,22 @@ public class RelicCommands implements CommandExecutor {
             }
         }
         else if(cmd.getName().equalsIgnoreCase("minigame")) {
-            if(GameDirectory.getExists(args[1])){
-                if(args[0].equalsIgnoreCase("start") && !GameDirectory.getActive(args[1])) {
-                    GameDirectory.StartGame(GameDirectory.getGame(args[1]));
-                    Bukkit.broadcastMessage(args[1] + " was started.");
-                    return true;
-                }
-                else if(args[0].equalsIgnoreCase("end") && GameDirectory.getActive(args[1])){
-                    GameDirectory.EndGame(GameDirectory.getGame(args[1]));
-                    player.sendMessage(args[1] + " was ended. GG y'all!");
-                    return true;
-                }
-                else {
-                    player.sendMessage("What's "+args[0]);
-                    return true;
+            player.sendMessage("Minigame command start");
+            if(args.length > 2) {
+                if (GameDirectory.getExists(args[1])) {
+                    player.sendMessage("so I guess this game exists.");
+                    if (args[0].equalsIgnoreCase("start") && !Bminsrelics.games.getActive(args[1])) {
+                        Bminsrelics.games.StartGame(GameDirectory.getGame(args[1]));
+                        Bukkit.broadcastMessage(args[1] + " was started.");
+                        return true;
+                    } else if (args[0].equalsIgnoreCase("end") && Bminsrelics.games.getActive(args[1])) {
+                        Bminsrelics.games.EndGame(GameDirectory.getGame(args[1]));
+                        player.sendMessage(args[1] + " was ended. GG y'all!");
+                        return true;
+                    } else {
+                        player.sendMessage("What's " + args[0]);
+                        return true;
+                    }
                 }
             }
             else{

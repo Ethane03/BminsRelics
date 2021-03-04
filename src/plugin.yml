@@ -26,4 +26,5 @@ commands:
     description: Play minigames!
     usage: /<command> [do] [game]
     permission: minecraft.command.gamemode
+    permission-message: You don't look like Bmin.
     
