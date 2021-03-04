@@ -1,6 +1,8 @@
 package frostfire.bminsrelics.commands;
 
 import frostfire.bminsrelics.Bminsrelics;
+import frostfire.bminsrelics.games.Game;
+import frostfire.bminsrelics.games.GameDirectory;
 import frostfire.bminsrelics.item.ItemManager;
 import frostfire.bminsrelics.item.Relic;
 
@@ -33,6 +35,21 @@ public class RelicCommandTabCompletion implements TabCompleter {
                 bools.add("true");
                 bools.add("false");
                 return bools;
+            }
+        }
+        else if(command.getName().equalsIgnoreCase("minigame")) {
+            if(strings.length == 2) {
+                List<String> list = new ArrayList<>();
+                list.add("start");
+                list.add("end");
+                return list;
+            }
+            else if(strings.length == 3) {
+                List<String> names = new ArrayList<>();
+                for(Game g : GameDirectory.allGames){
+                    names.add(g.name);
+                }
+                return names;
             }
         }
         return null;

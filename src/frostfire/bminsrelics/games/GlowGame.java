@@ -1,4 +1,5 @@
 package frostfire.bminsrelics.games;
+import org.bukkit.entity.ExperienceOrb;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.entity.PlayerDeathEvent;
@@ -30,7 +31,15 @@ public class GlowGame extends Game{
                 EjectPlayer(event.getEntity());
                 event.getEntity().setGlowing(false);
                 event.getEntity().sendMessage("You are out of the glow game. Better luck next time!");
-                event.getEntity().getKiller().sendMessage("One more down");
+                if(players.size() == 1) {
+                    event.getEntity().getKiller().sendMessage("You won yay!");
+                    for (int i =0;i<100;i++) {
+                        event.getEntity().getKiller().getWorld().spawn(event.getEntity().getKiller().getLocation(), ExperienceOrb.class);
+                    }
+                }
+                else{
+                    event.getEntity().getKiller().sendMessage("You killed a glowing player!. " + String.valueOf(players.size() - 1) + " player to go.");
+                }
             }
         }
     }

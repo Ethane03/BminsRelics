@@ -76,7 +76,9 @@ public abstract class Game implements Listener{
     }
     void onStart(){}
     void onJoin(Player p) {}
-    void onLeave(Player p) {}
+    void onLeave(Player p) {
+        p.setGlowing(false);
+    }
     public void End(){
         HandlerList.unregisterAll(this);
         GameDirectory.activeGames.remove(this);
