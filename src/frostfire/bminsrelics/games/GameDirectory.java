@@ -12,7 +12,6 @@ public class GameDirectory {
             activeGames.add(getGame(n));
         }
         for(Game g : activeGames) {
-            g.UpdatePlayerList();
             g.OnReload();
         }
     }

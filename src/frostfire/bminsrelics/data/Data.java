@@ -175,7 +175,7 @@ public class Data {
         else {
             config.set(game, null);
             File f = new File(folder,  game+".yml");
-            YamlConfiguration con = new YamlConfiguration();
+            YamlConfiguration con = YamlConfiguration.loadConfiguration(f);
             for (String s : con.getKeys(false)) {
                 con.set(s, null);
             }

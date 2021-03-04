@@ -1,7 +1,6 @@
 package frostfire.bminsrelics.games;
 
 import frostfire.bminsrelics.Bminsrelics;
-import net.minecraft.server.v1_16_R3.TickTask;
 
 import org.bukkit.Bukkit;
 import org.bukkit.OfflinePlayer;
@@ -58,11 +57,11 @@ public abstract class Game implements Listener{
     }
     public void Init(long frequency, long delay){
         getServer().getPluginManager().registerEvents(this, plugin);
+        Bminsrelics.data.SetGameActive(name, true);
         for(Player p : Bukkit.getOnlinePlayers()) {
             AddPlayer(p);
         }
         OnReload();
-        UpdatePlayerList();
         onStart();
     }
     public void OnReload() {
@@ -73,6 +72,7 @@ public abstract class Game implements Listener{
                 Update();
             }
         }, 20L, 0);
+        UpdatePlayerList();
     }
     void onStart(){}
     void onJoin(Player p) {}
@@ -80,6 +80,7 @@ public abstract class Game implements Listener{
     public void End(){
         HandlerList.unregisterAll(this);
         GameDirectory.activeGames.remove(this);
+        Bminsrelics.data.SetGameActive(name, false);
         getServer().getScheduler().cancelTask(TaskId);
     }
     @EventHandler
