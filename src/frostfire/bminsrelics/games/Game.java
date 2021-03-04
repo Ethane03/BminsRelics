@@ -1,6 +1,7 @@
 package frostfire.bminsrelics.games;
 
 import frostfire.bminsrelics.Bminsrelics;
+import net.minecraft.server.v1_16_R3.TickTask;
 
 import org.bukkit.Bukkit;
 import org.bukkit.OfflinePlayer;
@@ -9,7 +10,6 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.HandlerList;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
-import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitScheduler;
 
 import java.util.ArrayList;
@@ -24,6 +24,7 @@ public abstract class Game implements Listener{
     boolean run_forever = false;
     Bminsrelics plugin;
     List<OfflinePlayer> players;
+    int TaskId;
     public Game(String title, int lengthInTicks){
         name = title;
         life = lengthInTicks;
@@ -57,26 +58,29 @@ public abstract class Game implements Listener{
     }
     public void Init(long frequency, long delay){
         getServer().getPluginManager().registerEvents(this, plugin);
-        BukkitScheduler scheduler = getServer().getScheduler();
         for(Player p : Bukkit.getOnlinePlayers()) {
             AddPlayer(p);
         }
-        scheduler.scheduleSyncRepeatingTask(plugin, new Runnable() {
+        OnReload();
+        UpdatePlayerList();
+        onStart();
+    }
+    public void OnReload() {
+        BukkitScheduler scheduler = getServer().getScheduler();
+        TaskId = scheduler.scheduleSyncRepeatingTask(plugin, new Runnable() {
             @Override
             public void run() {
                 Update();
             }
-        }, delay, frequency);
-        UpdatePlayerList();
-        onStart();
+        }, 20L, 0);
     }
-    public void OnReload() {}
     void onStart(){}
     void onJoin(Player p) {}
     void onLeave(Player p) {}
     public void End(){
         HandlerList.unregisterAll(this);
         GameDirectory.activeGames.remove(this);
+        getServer().getScheduler().cancelTask(TaskId);
     }
     @EventHandler
     public void OnJoinGame(PlayerJoinEvent event) {
