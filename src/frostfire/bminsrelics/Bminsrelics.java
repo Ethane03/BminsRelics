@@ -5,16 +5,20 @@ import frostfire.bminsrelics.commands.RelicCommands;
 import frostfire.bminsrelics.data.Data;
 import frostfire.bminsrelics.events.RelicEvents;
 
+import org.bukkit.Bukkit;
+import org.bukkit.World;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class Bminsrelics extends JavaPlugin {
     public static Data data;
+    public static World world;
     public Bminsrelics Bminsrelics(){
         return this;
     }
     @Override
     public void onEnable() {
         data = new Data(getDataFolder());
+        world = Bukkit.getServer().getWorld("World");
         getCommand("relic").setExecutor(new RelicCommands());
         getCommand("relic").setTabCompleter(new RelicCommandTabCompletion());
         getCommand("checkpoint").setExecutor(new RelicCommands());

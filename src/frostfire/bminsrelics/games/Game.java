@@ -1,8 +1,12 @@
 package frostfire.bminsrelics.games;
 
 import frostfire.bminsrelics.Bminsrelics;
+import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitScheduler;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static org.bukkit.Bukkit.getServer;
 
@@ -12,6 +16,7 @@ public abstract class Game {
     public boolean running = false;
     public boolean run_forever = false;
     public Bminsrelics plugin;
+    public List<Player> players;
     public Game(Bminsrelics plug, String title, int lengthInTicks){
         name = title;
         life = lengthInTicks;
@@ -26,20 +31,28 @@ public abstract class Game {
     public void Update(){
 
     }
+    public void RemovePlayer(Player p){
+        players.remove(p);
+    }
     public void Action(){
 
     }
-    public void Start(long frequency, long delay){
+    public void Init(long frequency, long delay){
         running = true;
+        players = new ArrayList<Player>();
         BukkitScheduler scheduler = getServer().getScheduler();
         scheduler.scheduleSyncRepeatingTask(plugin, new Runnable() {
             @Override
             public void run() {
                 Update();
             }
-        }, 0L, 20L);
+        }, delay, frequency);
+        onStart();
+    }
+    public void onStart(){
     }
     public void End(){
         running = false;
+        GameDirectory.activeGames.remove(this);
     }
 }
