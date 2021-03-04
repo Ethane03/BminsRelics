@@ -12,6 +12,7 @@ import org.bukkit.World;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.configuration.file.YamlConfiguration;
+import org.bukkit.entity.Player;
 
 public class Data {
     File folder;
@@ -88,20 +89,20 @@ public class Data {
         }
     }
     //Glow game info
-    public void AddGameStatus(String name, String playerName, boolean playing) {
-        File file = new File(folder, name + ".yml");
+    public void SetPlayerParticipation(String game, Player player,Boolean in) {
+        File file = new File(folder, "playerReg.yml");
         YamlConfiguration config = YamlConfiguration.loadConfiguration(file);
-        config.set(playerName+".in",playing);
+        config.set(game+"."+player.getUniqueId().toString(),in);
         try {
             config.save(file);
         } catch (IOException e1) {
             e1.printStackTrace();
         }
     }
-    public boolean GetGameStatus(String name, String playerName) {
-        File file = new File(folder, name + ".yml");
+    public boolean GetParticipating(String game, Player player) {
+        File file = new File(folder,  "playerReg.yml");
         YamlConfiguration config = new YamlConfiguration();
-        boolean status;
+        boolean status = false;
         try {
             config.load(file);
         } catch (FileNotFoundException e) {
@@ -111,7 +112,83 @@ public class Data {
         } catch (InvalidConfigurationException e) {
             e.printStackTrace();
         }
-        status=config.getBoolean(playerName+".in");
+        status=config.getBoolean(game+"."+player.getUniqueId().toString());
         return status;
     }
+    public boolean hasParticipated(String game, Player player) {
+        File file = new File(folder,  "playerReg.yml");
+        YamlConfiguration config = new YamlConfiguration();
+        try {
+            config.load(file);
+        } catch (IOException | InvalidConfigurationException e) {
+            e.printStackTrace();
+        }
+        return config.contains(game+"."+player.getUniqueId().toString());
+    }
+    public List<String> getPlayerList(String game) {
+        File file = new File(folder,  "playerReg.yml");
+        YamlConfiguration config = new YamlConfiguration();
+        try {
+            config.load(file);
+        } catch (IOException | InvalidConfigurationException e) {
+            e.printStackTrace();
+        }
+        List<String> players = new ArrayList<>();
+        for(String p : config.getConfigurationSection(game).getKeys(false)) {
+            if(config.getBoolean(game+"."+p)) {
+                players.add(p);
+            }
+        }
+        return players;
+    }
+    public void SetGameVariable(String game, String variable, Object value) {
+        File file = new File(folder, game+".yml");
+        YamlConfiguration config = YamlConfiguration.loadConfiguration(file);
+        config.set(variable,value);
+        try {
+            config.save(file);
+        } catch (IOException e1) {
+            e1.printStackTrace();
+        }
+    }
+    public Object GetGameVariable(String game, String variable,Object def) {
+        File file = new File(folder,  game+".yml");
+        YamlConfiguration config = new YamlConfiguration();
+        try {
+            config.load(file);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (InvalidConfigurationException e) {
+            e.printStackTrace();
+        }
+        Object var = config.get(variable);
+        return var==null?def:variable;
+    }
+    public void SetGameActive(String game,Boolean active) {
+        File file = new File(folder, "gameReg.yml");
+        YamlConfiguration config = YamlConfiguration.loadConfiguration(file);
+        if(active) {
+            config.set(game, true);
+        }
+        else {
+            config.set(game, null);
+        }
+        try {
+            config.save(file);
+        } catch (IOException e1) {
+            e1.printStackTrace();
+        }
+    }
+    public List<String> GetActiveGames() {
+        File file = new File(folder, "gameReg.yml");
+        YamlConfiguration config = YamlConfiguration.loadConfiguration(file);
+        List<String> games = new ArrayList<>();
+        for(String s : config.getKeys(false)) {
+            games.add(s);
+        }
+        return games;
+    }
+
 }

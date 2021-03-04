@@ -4,21 +4,20 @@ import frostfire.bminsrelics.commands.RelicCommandTabCompletion;
 import frostfire.bminsrelics.commands.RelicCommands;
 import frostfire.bminsrelics.data.Data;
 import frostfire.bminsrelics.events.RelicEvents;
+import frostfire.bminsrelics.games.GameDirectory;
 
-import org.bukkit.Bukkit;
-import org.bukkit.World;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class Bminsrelics extends JavaPlugin {
     public static Data data;
-    public static World world;
+    public static GameDirectory games;
     public Bminsrelics Bminsrelics(){
         return this;
     }
     @Override
     public void onEnable() {
         data = new Data(getDataFolder());
-        world = Bukkit.getServer().getWorld("World");
+        games = new GameDirectory();
         getCommand("relic").setExecutor(new RelicCommands());
         getCommand("relic").setTabCompleter(new RelicCommandTabCompletion());
         getCommand("checkpoint").setExecutor(new RelicCommands());

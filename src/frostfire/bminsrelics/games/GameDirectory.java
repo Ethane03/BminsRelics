@@ -1,15 +1,21 @@
 package frostfire.bminsrelics.games;
 
 import frostfire.bminsrelics.Bminsrelics;
-import org.bukkit.Bukkit;
-
-import java.sql.Array;
-import java.util.ArrayList;
 import java.util.List;
 
 public class GameDirectory {
-    public static Game[] allGames = {new GlowGame(Bminsrelics.world)};
-    public static List<Game> activeGames = new ArrayList<Game>();
+    public static Game[] allGames = {new GlowGame()};
+    public static List<Game> activeGames;
+    
+    public GameDirectory()  {
+        for(String n : Bminsrelics.data.GetActiveGames()) {
+            activeGames.add(getGame(n));
+        }
+        for(Game g : activeGames) {
+            g.UpdatePlayerList();
+        }
+    }
+    
     public static boolean getActive(String game){
         for(int i = 0;i<activeGames.size();i++){
             if(activeGames.get(i).name == game){
